@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="8uFKm0E5S0W7gIrL6gmPUg" Reference="r2aVhoRjsEybYC389EQ7Qw/FYdDo0wbBECNGE31fkbdIg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fullcalendar.io/demos" DesignTimeRectangle="597, 570, 1214, 32" DesignTimeScaleFactor="1.5" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='TD' class='fc-timegrid-slot fc-timegrid-slot-lane' aaname='{suggestedAppointmentTime}' check:text='{suggestedAppointmentTime}' /&gt;" Guid="88fb3fd5-45f7-442f-828e-3da5746e2847" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Demos | FullCalendar' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="b7a3d33c-be60-46f8-bdf4-c0df0edec3ff" CvTextArea="546, 426, 43, 25" CvTextArgument="1pm" CvType="Text" DesignTimeRectangle="541, 574, 56, 25" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='fc-timegrid-slot-label-frame fc-scrollgrid-shrink-frame' aaname='' check:innerText='1pm' /&gt;" Guid="7d90b7f2-26d9-4cf3-8976-edb7545fcaed" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="b2984a5d81fdc1614e73ae08817a8a2c.png" xmlns="">0Su1nuxGsbkOVEUMsXZ6kxA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

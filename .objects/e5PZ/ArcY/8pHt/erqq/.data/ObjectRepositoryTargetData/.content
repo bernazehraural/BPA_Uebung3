@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="A1AtFy8hI0qoMdUa0t8ayg" Reference="r2aVhoRjsEybYC389EQ7Qw/erqqdivsE0SK5cX4faBhHA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fullcalendar.io/demos" CVScreenId="4c3da40b-e0aa-4922-b449-8dc5d3846c85" CvTextArea="1049, 294, 27, 19" CvTextArgument="24" CvType="Text" DesignTimeRectangle="894, 490, 187, 37" DesignTimeScaleFactor="1.5" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='fc-highlight' type='' tag='DIV' aaname='{currentDay}' check:text='{currentDay}' /&gt;" Guid="c5d2129c-64fa-4a00-930e-ffd96dbbac95" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Demos | FullCalendar' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="4c3da40b-e0aa-4922-b449-8dc5d3846c85" CvTextArea="1049, 294, 27, 19" CvTextArgument="24" CvType="Text" DesignTimeRectangle="1047, 498, 28, 21" ElementType="Text" FuzzyAccuracy="0.87" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='fc-dom-133' type='' tag='A' class='fc-daygrid-day-number' aaname='{currentDay}' check:innerText='{currentDay}' /&gt;" Guid="0c58a0fa-1231-42a2-b9dd-91cf047cda54" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e8e4fbf1b4d3f33777706ec3e0e732b5.png" xmlns="">0jVpat2CpG0WtpcMcaJF9Lg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome Demos  FullCalendar",
+  "Type": "App",
+  "Id": "e5PZzea1BE-tIOmKrYE4hw",
+  "Reference": "r2aVhoRjsEybYC389EQ7Qw/e5PZzea1BE-tIOmKrYE4hw",
+  "Created": "2024-12-17T21:49:35.0287193Z",
+  "Updated": "2024-12-17T21:49:35.0287193Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

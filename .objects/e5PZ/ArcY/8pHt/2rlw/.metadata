@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Selectable Dates",
+  "Type": "Element",
+  "Id": "2rlw33DNm0aIJft0Wx5vNw",
+  "Reference": "r2aVhoRjsEybYC389EQ7Qw/2rlw33DNm0aIJft0Wx5vNw",
+  "ParentRef": "r2aVhoRjsEybYC389EQ7Qw/8pHtCkhwxU2s-xUPTKEA9g",
+  "Created": "2024-12-17T21:50:29.9781016Z",
+  "Updated": "2024-12-17T21:50:29.9781016Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

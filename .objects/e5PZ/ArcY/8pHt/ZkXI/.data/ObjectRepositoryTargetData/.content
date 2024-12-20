@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="mM1p-aFlM0SCoDz-1IJS5Q" Reference="r2aVhoRjsEybYC389EQ7Qw/ZkXINhXJRUKMSeTGobQXOA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fullcalendar.io/demos" DesignTimeRectangle="491, 370, 1370, 1141" DesignTimeScaleFactor="1.5" FuzzySelectorArgument="&lt;webctrl id='demo-content' tag='DIV' type='' class='demos__main-container' aaname='' check:innerText='today&amp;#xA;December 24, 2024&amp;#xA;month&amp;#xA;week&amp;#xA;day&amp;#xA;&amp;#x9;&amp;#xA;Tuesday&amp;#xA;&amp;#xA;&amp;#xA;all-day&amp;#xA;&amp;#x9;&amp;#xA;&amp;#xA;&amp;#xA;&amp;#xA;12am&amp;#xA;&amp;#x9;&amp;#xA;&amp;#x9;&amp;#xA;&amp;#xA;1am&amp;#xA;&amp;#x9;&amp;#xA;&amp;#x9;&amp;#xA;&amp;#xA;2am&amp;#xA;&amp;#x9;&amp;#xA;&amp;#x9;&amp;#xA;&amp;#xA;3am&amp;#xA;&amp;#x9;&amp;#xA;&amp;#x9;' /&gt;" Guid="c426834b-52b9-4c10-9250-3866e77667ff" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Demos | FullCalendar' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="ae9aeb86-8d5b-47e8-8578-06394fdcc08d" CvTextArea="534, 587, 55, 19" CvTextArgument="10am" CvType="Text" DesignTimeRectangle="528, 584, 69, 25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='10am' type='' tag='DIV' class='fc-timegrid-slot-label-cushion fc-scrollgrid-shrink-cushion' check:innerText='10am' /&gt;" Guid="9abc3112-9fe7-46e5-b202-5351391fe1e6" SearchSteps="FuzzySelector, CV" />
+          <Target CVScreenId="ae9aeb86-8d5b-47e8-8578-06394fdcc08d" CvTextArea="521, 539, 70, 24" CvTextArgument="all-day" CvType="Text" DesignTimeRectangle="516, 537, 81, 25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='fc-timegrid-axis-cushion fc-scrollgrid-shrink-cushion fc-scrollgrid-sync-inner' aaname='all-day' check:innerText='all-day' /&gt;" Guid="c6856bc8-27fc-468c-8a75-08123220707a" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="8b02e4facf1e0a3f9e30e543b5a57b57.png" xmlns="">0RfQfmNttpUONk-wagErKIQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

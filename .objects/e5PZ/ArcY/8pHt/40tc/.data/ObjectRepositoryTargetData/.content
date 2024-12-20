@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="S2yl8DGBX0KFI_vLKteHGQ" Reference="r2aVhoRjsEybYC389EQ7Qw/40tcd88k0UWJw3p9Unkdeg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fullcalendar.io/demos" CVScreenId="55a2b070-831d-47fc-9732-e1d2f22f8812" CvTextArea="1005, 362, 272, 33" CvType="AnyWordGroup" DesignTimeRectangle="1004, 361, 273, 33" DesignTimeScaleFactor="1.5" ElementType="Text" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl tag='H2' class='fc-toolbar-title' id='fc-dom-*' innertext='*{DateTime.ParseExact(suggestedAppointmentDate, &amp;quot;MM/dd/yyyy&amp;quot;, System.Globalization.CultureInfo.InvariantCulture).ToString(&amp;quot;MMMM&amp;quot;)}*' /&gt;" Guid="cae1b132-6162-4ce5-8c16-334c6ce6f4bd" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Demos | FullCalendar' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="515, 351, 1322, 52" FuzzySelectorArgument="&lt;webctrl type='' parentid='demo-content' tag='DIV' class='fc-header-toolbar fc-toolbar fc-toolbar-ltr' aaname='' check:innerText='today&amp;#xA;December 2024&amp;#xA;month&amp;#xA;week&amp;#xA;day&amp;#xA;list' /&gt;" Guid="24dead84-b50a-4e16-9b18-4319219cd192" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <TargetAnchorable.PointOffset>
+        <PointOffset X="1" Y="-1" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="dd1462924523c449cc22fa1bb7fb4735.png" xmlns="">0POz-a9NDGkWHswnZYxHtBA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

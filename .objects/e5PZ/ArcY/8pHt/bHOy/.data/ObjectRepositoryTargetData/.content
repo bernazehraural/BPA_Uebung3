@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="14tSsUIW6EyTc0lTDq8L_A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fullcalendar.io/demos" DesignTimeRectangle="11, 381, 1895, 1336" DesignTimeScaleFactor="1.5" FuzzySelectorArgument="&lt;webctrl type='' class='demos__container container container--wide' tag='DIV' aaname='                   ' check:innerText='Demos&amp;#xA;Drag-n-Drop Events&amp;#xA;&amp;#xA;Drag these onto the calendar:&amp;#xA;&amp;#xA;Event 1&amp;#xA;Event 2&amp;#xA;&amp;#xA;More info&amp;#xA;&amp;#xA;Resource' /&gt;" Guid="2b7f3762-b2c0-4116-bfb0-b70f5cb9400c" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Demos | FullCalendar' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="4e17d4739d4b8c001e44592ffb3535ac.png" xmlns="">0SjYH_2V-CUCnACRVglFyiw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">KeyboardShortcut</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

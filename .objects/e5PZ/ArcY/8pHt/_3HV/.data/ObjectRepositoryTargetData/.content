@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="XEHORlCCCUeLsSBnVUsy-w" Reference="r2aVhoRjsEybYC389EQ7Qw/_3HVqJZG_0u4fH8JqdKL1Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fullcalendar.io/demos" CVScreenId="e2341a2f-fd08-43bf-a119-329c9aae04ff" DesignTimeRectangle="894, 24, 187, 157" DesignTimeScaleFactor="1.5" FuzzyAccuracy="1" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='fc-daygrid-day-frame fc-scrollgrid-sync-inner' tag='DIV' aaname='' check:innerText='{0}' /&gt;&quot;, currentDay)]" Guid="bd1346fc-5d6f-451f-8922-64faedf517db" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Demos | FullCalendar' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="e2341a2f-fd08-43bf-a119-329c9aae04ff" DesignTimeRectangle="1044, 24, 37, 37" ElementType="Text" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='fc-dom-105' type='' tag='A' class='fc-daygrid-day-number' aaname='{0}' check:innerText='{0}' /&gt;&quot;, currentDay)]" Guid="812b824e-86a5-4f8c-9b88-ffc110d399a4" ImageBase64="" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <TargetAnchorable.PointOffset>
+        <PointOffset Position="BottomRight" X="-62" Y="-53" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="566bae0baf63c6d9b500e604b591d9db.png" xmlns="">07qNrHnXUJU-Ki3B-fgFefg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="*" Name="currentDay" />
+    </scg:List>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

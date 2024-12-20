@@ -1,0 +1,1186 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_ConnectionUri="mongodb+srv://bernaural123:Balkaya00@uebung3.sdru7.mongodb.net/?retryWrites=true&amp;w=majority&amp;appName=Uebung3" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:this="clr-namespace:" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugagf="clr-namespace:UiPath.GSuite.Activities.Gmail.Filters;assembly=UiPath.GSuite.Activities" xmlns:ugagm="clr-namespace:UiPath.GSuite.Activities.Gmail.Models;assembly=UiPath.GSuite.Activities" xmlns:ugdm="clr-namespace:UiPath.GSuite.Drive.Models;assembly=UiPath.GSuite" xmlns:ugm="clr-namespace:UiPath.GSuite.Models;assembly=UiPath.GSuite" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:umae="clr-namespace:UiPath.MicrosoftOffice365.Activities.Excel;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umae1="clr-namespace:UiPath.Mail.Activities.Enums;assembly=UiPath.Mail.Activities" xmlns:umaee="clr-namespace:UiPath.MicrosoftOffice365.Activities.Excel.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umafe="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umafm="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files.Models;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.Mail.Activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:usau1="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usau2="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_ConnectionUri" Type="InArgument(x:String)" />
+    <x:Property Name="out_Result" Type="OutArgument(x:String)" />
+    <x:Property Name="io_CustomerName" Type="InOutArgument(x:String)" />
+    <x:Property Name="out_VehiclesList" Type="OutArgument(x:String)" />
+    <x:Property Name="io_customerEmail" Type="InOutArgument(x:String)" />
+    <x:Property Name="in_customerInformation" Type="InArgument(x:String)" />
+    <x:Property Name="io_CustomerSurname" Type="InArgument(x:String)" />
+    <x:Property Name="io_CustomerVehicle" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>MongoDB.Driver</x:String>
+      <x:String>InternalLabs.MongoDB.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>MongoDB.Bson</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Filters</x:String>
+      <x:String>UiPath.GSuite.Activities.Filters</x:String>
+      <x:String>UiPath.GSuite.Gmail.Enums</x:String>
+      <x:String>UiPath.GSuite.Models</x:String>
+      <x:String>UiPath.Shared.Api.Google.Gmail.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Utilities</x:String>
+      <x:String>UiPath.Productivity.Activities.Diagnostics</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Triggers</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.GSuite</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Enums</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>Microsoft.Office.Interop.Word</x:String>
+      <x:String>System.Windows.Documents</x:String>
+      <x:String>System.Windows.Media.Animation</x:String>
+      <x:String>System.Windows</x:String>
+      <x:String>System.Windows.Threading</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Models</x:String>
+      <x:String>UiPath.Productivity.Activities.Persistence</x:String>
+      <x:String>UiPath.Sdk.Activities</x:String>
+      <x:String>UiPath.Sdk.Activities.DependencyInjection.Contracts</x:String>
+      <x:String>UiPath.Sdk.Activities.DependencyInjection</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>Google.Apis.Forms.v1.Data</x:String>
+      <x:String>Google.Apis.Requests</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets.Enums</x:String>
+      <x:String>Microsoft.Office.Interop.Excel</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.FTP.Activities</x:String>
+      <x:String>UiPath.FTP</x:String>
+      <x:String>UiPath.FTP.Enums</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>Microsoft</x:String>
+      <x:String>Microsoft.Win32.SafeHandles</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Configuration.Assemblies</x:String>
+      <x:String>System.CodeDom.Compiler</x:String>
+      <x:String>System.Buffers</x:String>
+      <x:String>System.Buffers.Text</x:String>
+      <x:String>System.Buffers.Binary</x:String>
+      <x:String>System.Threading</x:String>
+      <x:String>System.Threading.Tasks</x:String>
+      <x:String>System.Threading.Tasks.Sources</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Text.Unicode</x:String>
+      <x:String>System.Security.Principal</x:String>
+      <x:String>System.Security.Permissions</x:String>
+      <x:String>System.Security.Cryptography</x:String>
+      <x:String>System.Runtime</x:String>
+      <x:String>System.Runtime.Remoting</x:String>
+      <x:String>System.Runtime.ExceptionServices</x:String>
+      <x:String>System.Runtime.ConstrainedExecution</x:String>
+      <x:String>System.Runtime.Versioning</x:String>
+      <x:String>System.Runtime.Loader</x:String>
+      <x:String>System.Runtime.Intrinsics</x:String>
+      <x:String>System.Runtime.Intrinsics.Wasm</x:String>
+      <x:String>System.Runtime.Intrinsics.Arm</x:String>
+      <x:String>System.Runtime.Intrinsics.X86</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.InteropServices.ObjectiveC</x:String>
+      <x:String>System.Runtime.InteropServices.Marshalling</x:String>
+      <x:String>System.Runtime.InteropServices.ComTypes</x:String>
+      <x:String>System.Runtime.CompilerServices</x:String>
+      <x:String>System.Resources</x:String>
+      <x:String>System.Reflection.Metadata</x:String>
+      <x:String>System.Reflection.Emit</x:String>
+      <x:String>System.IO.Enumeration</x:String>
+      <x:String>System.Diagnostics.SymbolStore</x:String>
+      <x:String>System.Diagnostics.Contracts</x:String>
+      <x:String>System.Diagnostics.CodeAnalysis</x:String>
+      <x:String>System.Diagnostics.Tracing</x:String>
+      <x:String>System.Collections.Concurrent</x:String>
+      <x:String>Internal</x:String>
+      <x:String>System.CodeDom</x:String>
+      <x:String>Microsoft.CSharp</x:String>
+      <x:String>System.Linq.Expressions.Interpreter</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>UiPath.Workflow.Runtime</x:String>
+      <x:String>System.Activities.Tracking</x:String>
+      <x:String>System.Activities.Statements.Tracking</x:String>
+      <x:String>System.Activities.Runtime</x:String>
+      <x:String>System.Activities.Runtime.DurableInstancing</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Activities.ParallelTracking</x:String>
+      <x:String>System.Activities.Hosting</x:String>
+      <x:String>System.Activities.Persistence</x:String>
+      <x:String>System.Activities.DurableInstancing</x:String>
+      <x:String>System.ComponentModel.Design.Serialization</x:String>
+      <x:String>System.Security.Authentication.ExtendedProtection</x:String>
+      <x:String>System.Timers</x:String>
+      <x:String>System.ComponentModel.Design</x:String>
+      <x:String>System.Xml.Schema</x:String>
+      <x:String>System.Xml.Xsl</x:String>
+      <x:String>System.Xml.Xsl.Runtime</x:String>
+      <x:String>System.Xml.XPath</x:String>
+      <x:String>System.Xml.Resolvers</x:String>
+      <x:String>Microsoft.CodeAnalysis</x:String>
+      <x:String>Microsoft.CodeAnalysis.FlowAnalysis</x:String>
+      <x:String>Microsoft.CodeAnalysis.Text</x:String>
+      <x:String>Microsoft.CodeAnalysis.Diagnostics</x:String>
+      <x:String>Microsoft.CodeAnalysis.Diagnostics.Telemetry</x:String>
+      <x:String>Microsoft.CodeAnalysis.Operations</x:String>
+      <x:String>Microsoft.CodeAnalysis.Emit</x:String>
+      <x:String>Microsoft.CodeAnalysis.VisualBasic</x:String>
+      <x:String>Microsoft.CodeAnalysis.VisualBasic.Syntax</x:String>
+      <x:String>Microsoft.VisualBasic.FileIO</x:String>
+      <x:String>UiPath.GSuite.Activities.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.GSuite.Gmail.Models</x:String>
+      <x:String>UiPath.Platform</x:String>
+      <x:String>Microsoft.Exchange.WebServices.Data</x:String>
+      <x:String>UiPath.Mail.Exchange</x:String>
+      <x:String>UiPath.Mail.Exchange.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>MongoDB.Driver</AssemblyReference>
+      <AssemblyReference>MongoDB.Driver.Core</AssemblyReference>
+      <AssemblyReference>InternalLabs.MongoDB.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>MongoDB.Bson</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Office.Interop.Word</AssemblyReference>
+      <AssemblyReference>PresentationUI</AssemblyReference>
+      <AssemblyReference>System.Windows.Presentation</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>DnsClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>Google.Apis.Forms.v1</AssemblyReference>
+      <AssemblyReference>Google.Apis</AssemblyReference>
+      <AssemblyReference>Google.Apis.Core</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>Microsoft.Office.Interop.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.FTP.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.FTP</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Validation</AssemblyReference>
+      <AssemblyReference>System.IO.Pipes</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography</AssemblyReference>
+      <AssemblyReference>System.Security.Principal.Windows</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>System.IO.MemoryMappedFiles</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Registry</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Threading.AccessControl</AssemblyReference>
+      <AssemblyReference>System.Threading</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Parallel</AssemblyReference>
+      <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
+      <AssemblyReference>System.Text.Encodings.Web</AssemblyReference>
+      <AssemblyReference>System.Security.Claims</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Pkcs</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.ProtectedData</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.CompilerServices.VisualC</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Resources.Writer</AssemblyReference>
+      <AssemblyReference>Microsoft.PowerShell.Commands.Diagnostics</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.FileVersionInfo</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TraceSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.EventLog</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.PerformanceCounter</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TextWriterTraceListener</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.StackTrace</AssemblyReference>
+      <AssemblyReference>System.Collections.Concurrent</AssemblyReference>
+      <AssemblyReference>System.Net.Security</AssemblyReference>
+      <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xml.XPath.XDocument</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis.Workspaces</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis.Features</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>Microsoft.Exchange.WebServices</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="888.6666666666665,13274" sap2010:WorkflowViewState.IdRef="Sequence_18">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="queryResult" />
+      <Variable x:TypeArguments="OutArgument" Name="out_Result" />
+      <Variable x:TypeArguments="ugm:GmailMessage" Name="out_Email" />
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="out_Emails" />
+      <Variable x:TypeArguments="ugm:GmailMessage" Name="out_Information" />
+      <Variable x:TypeArguments="x:String" Name="addedCustomer" />
+      <Variable x:TypeArguments="x:String" Name="suggestedAppointmentDate" />
+      <Variable x:TypeArguments="x:String" Name="suggestedAppointmentTime" />
+      <Variable x:TypeArguments="x:String" Name="currentDay" />
+      <Variable x:TypeArguments="x:Boolean" Name="popUpAppeared" />
+      <Variable x:TypeArguments="x:String" Name="block" />
+      <Variable x:TypeArguments="x:Boolean" Name="targetAppeared" />
+      <Variable x:TypeArguments="x:String" Name="currentMonth" />
+      <Variable x:TypeArguments="ui:Image" Name="arrangedAppointment" />
+      <Variable x:TypeArguments="x:String" Name="screenshotPath" />
+      <Variable x:TypeArguments="x:Boolean" Default="True" Name="rescheduleFlag" />
+      <Variable x:TypeArguments="ugm:GmailMessage" Name="out_Response" />
+      <Variable x:TypeArguments="x:String" Name="serviceCoverage" />
+      <Variable x:TypeArguments="x:String" Name="priceString" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt" />
+      <Variable x:TypeArguments="x:String" Name="invoiceNumber" />
+      <Variable x:TypeArguments="ugdm:GDriveLocalItem" Name="out_InvoiceFile" />
+      <Variable x:TypeArguments="x:String" Name="out_InvoicePath" />
+      <Variable x:TypeArguments="x:String" Name="attachmentPath" />
+      <Variable x:TypeArguments="x:String" Name="price">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">0</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Name="newEmail_IsReceived">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Boolean" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="s:DateTime" Name="processDate" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uga:WaitForEmailReceivedConnections ConnectionAccountName="{x:Null}" JobData="{x:Null}" AuthScopesInvalid="False" ConnectionId="3a537b0e-bad3-4407-b69f-30f3765c0dcf" DisplayName="Wait for Email Received and Resume" sap:VirtualizedContainerService.HintSize="638,238" sap2010:WorkflowViewState.IdRef="WaitForEmailReceivedConnections_1" IncludeAttachments="False" MarkAsRead="True" Result="[out_Email]" UseConnectionService="True" WithAttachmentsOnly="False">
+      <uga:WaitForEmailReceivedConnections.Filter>
+        <ugagf:TriggerMailFilterWithVariablesCollection LogicalOperator="Or">
+          <ugagf:TriggerMailFilterWithVariablesCollection.Filters>
+            <ugagf:TriggerMailFilterElementWithVariables ArrayStringOperator="Contains" BodyOperator="Contains" CollectionFilterOperator="In" Criteria="Subject" InStringValue="Appointment" SenderRecipientOperator="Contains" StringOperator="Contains" TypeValue="Email" />
+            <ugagf:TriggerMailFilterElementWithVariables ArrayStringOperator="Contains" BodyOperator="Contains" CollectionFilterOperator="In" Criteria="Body" InStringValue="Appointment" SenderRecipientOperator="Contains" StringOperator="Contains" TypeValue="Email" />
+          </ugagf:TriggerMailFilterWithVariablesCollection.Filters>
+        </ugagf:TriggerMailFilterWithVariablesCollection>
+      </uga:WaitForEmailReceivedConnections.Filter>
+      <uga:WaitForEmailReceivedConnections.Folder>
+        <ugagm:FolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolderName="{x:Null}" BrowserFolderId="INBOX" BrowserFolderName="Inbox" ConnectionKey="3a537b0e-bad3-4407-b69f-30f3765c0dcf" InputMode="Browse">
+          <ugagm:FolderArgument.Backup>
+            <usau:BackupSlot x:TypeArguments="ugage:FolderInputMode" StoredValue="Browse">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="ugage:FolderInputMode, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </ugagm:FolderArgument.Backup>
+        </ugagm:FolderArgument>
+      </uga:WaitForEmailReceivedConnections.Folder>
+    </uga:WaitForEmailReceivedConnections>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="638,123.33333333333333" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="A new appointment request received" />
+    <Assign sap:VirtualizedContainerService.HintSize="638,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[io_customerEmail]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[out_Email.From().ToString()]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;Please respond directly to this e-mail. Please fill the personal information below:&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Name:&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Surname: &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Vehicle: &lt;/SPAN&gt;&lt;/P&gt;&quot;)]" ConnectionId="3a537b0e-bad3-4407-b69f-30f3765c0dcf" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="638,493.3333333333333" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Request: Personal Information" To="[New List(Of String) From {out_Email.From.Address}]" UseConnectionService="True">
+      <uga:SendEmailConnections.Attachments>
+        <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
+      </uga:SendEmailConnections.Attachments>
+      <uga:SendEmailConnections.AttachmentsBackup>
+        <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugage:AttachmentInputMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:SendEmailConnections.AttachmentsBackup>
+      <uga:SendEmailConnections.InputTypeBackup>
+        <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:SendEmailConnections.InputTypeBackup>
+    </uga:SendEmailConnections>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="638,123.33333333333333" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="Contacted the customer, requested personal info!" />
+    <uga:WaitForEmailReceivedConnections ConnectionAccountName="{x:Null}" JobData="{x:Null}" AuthScopesInvalid="False" ConnectionId="3a537b0e-bad3-4407-b69f-30f3765c0dcf" DisplayName="Wait for Email Received and Resume" sap:VirtualizedContainerService.HintSize="638,238" sap2010:WorkflowViewState.IdRef="WaitForEmailReceivedConnections_2" IncludeAttachments="False" MarkAsRead="True" Result="[out_Information]" UseConnectionService="True" WithAttachmentsOnly="False">
+      <uga:WaitForEmailReceivedConnections.Filter>
+        <ugagf:TriggerMailFilterWithVariablesCollection LogicalOperator="And">
+          <ugagf:TriggerMailFilterWithVariablesCollection.Filters>
+            <ugagf:TriggerMailFilterElementWithVariables ArrayStringOperator="Contains" BodyOperator="Contains" CollectionFilterOperator="In" Criteria="Subject" InStringValue="Re: Request: Personal Information" SenderRecipientOperator="Contains" StringOperator="Contains" TypeValue="Email" />
+            <ugagf:TriggerMailFilterElementWithVariables ArrayStringOperator="Contains" BodyOperator="Contains" CollectionFilterOperator="In" Criteria="Body" InStringValue="Name" SenderRecipientOperator="Contains" StringOperator="Contains" TypeValue="Email" />
+          </ugagf:TriggerMailFilterWithVariablesCollection.Filters>
+        </ugagf:TriggerMailFilterWithVariablesCollection>
+      </uga:WaitForEmailReceivedConnections.Filter>
+      <uga:WaitForEmailReceivedConnections.Folder>
+        <ugagm:FolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolderName="{x:Null}" BrowserFolderId="INBOX" BrowserFolderName="Inbox" ConnectionKey="3a537b0e-bad3-4407-b69f-30f3765c0dcf" InputMode="Browse">
+          <ugagm:FolderArgument.Backup>
+            <usau:BackupSlot x:TypeArguments="ugage:FolderInputMode" StoredValue="Browse">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="ugage:FolderInputMode, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </ugagm:FolderArgument.Backup>
+        </ugagm:FolderArgument>
+      </uga:WaitForEmailReceivedConnections.Folder>
+    </uga:WaitForEmailReceivedConnections>
+    <Assign sap:VirtualizedContainerService.HintSize="638,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[in_customerInformation]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[out_Information.Body().toString()]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="638,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[io_CustomerName]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">[in_CustomerInformation.Split(Environment.NewLine.ToCharArray()) _
+                                            .Where(Function(l) l.Trim().StartsWith("Name: ")) _
+                                            .FirstOrDefault()]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="638,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[io_CustomerSurname]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">[in_CustomerInformation.Split(Environment.NewLine.ToCharArray()) _
+                            .Where(Function(line) line.StartsWith("Surname:")) _
+                            .FirstOrDefault() _
+                            .Split(":"c)(1) _
+                            .Trim()]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="638,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[io_CustomerVehicle]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">[in_CustomerInformation.Split(Environment.NewLine.ToCharArray()) _
+                            .Where(Function(line) line.StartsWith("Vehicle:")) _
+                            .FirstOrDefault() _
+                            .Split(":"c)(1) _
+                            .Trim()]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="try  &#xD;&#xA;{&#xD;&#xA;    // Setup MongoDB connection settings&#xD;&#xA;    var settings = MongoClientSettings.FromConnectionString(in_ConnectionUri);&#xD;&#xA;    settings.ServerApi = new ServerApi(ServerApiVersion.V1);&#xD;&#xA;&#xD;&#xA;    // Create MongoDB client&#xD;&#xA;    var client = new MongoClient(settings);&#xD;&#xA;&#xD;&#xA;    // Run ping command to check connection&#xD;&#xA;    out_Result = (client.GetDatabase(&quot;admin&quot;).RunCommand&lt;BsonDocument&gt;(new BsonDocument(&quot;ping&quot;, 1))).ToString();&#xD;&#xA;    System.Console.WriteLine(&quot;Pinged your deployment. You successfully connected to MongoDB!&quot;);&#xD;&#xA;&#xD;&#xA;    // Access the database and collection&#xD;&#xA;    var database = client.GetDatabase(&quot;customers&quot;); // Replace with your database name&#xD;&#xA;    var collection = database.GetCollection&lt;BsonDocument&gt;(&quot;CustomerRelation&quot;); // Replace with your collection name&#xD;&#xA;&#xD;&#xA;    // Get the name, surname, and vehicle input from UiPath&#xD;&#xA;    string inputName = in_CustomerName; // Use the UiPath input variable for name&#xD;&#xA;    string inputSurname = in_CustomerSurname; // Use the UiPath input variable for surname&#xD;&#xA;    string inputVehicle = in_CustomerVehicle; // Use the UiPath input variable for vehicle&#xD;&#xA;&#xD;&#xA;    // Check if the input values are null or empty&#xD;&#xA;    if (string.IsNullOrEmpty(inputName) || string.IsNullOrEmpty(inputSurname) || string.IsNullOrEmpty(inputVehicle))&#xD;&#xA;    {&#xD;&#xA;        out_Result = &quot;Error: Name, Surname or Vehicle input is missing.&quot;;&#xD;&#xA;        return;&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    // Define the query to match by name, surname, and vehicle&#xD;&#xA;    var filter = Builders&lt;BsonDocument&gt;.Filter.Eq(&quot;name&quot;, inputName) &amp;&#xD;&#xA;                 Builders&lt;BsonDocument&gt;.Filter.Eq(&quot;surname&quot;, inputSurname) &amp;&#xD;&#xA;                 Builders&lt;BsonDocument&gt;.Filter.Eq(&quot;vehicle&quot;, inputVehicle);&#xD;&#xA;&#xD;&#xA;    // Check if a document with the specified name, surname, and vehicle exists in the collection&#xD;&#xA;    var existingDocument = collection.Find(filter).FirstOrDefault();&#xD;&#xA;&#xD;&#xA;    if (existingDocument != null)&#xD;&#xA;    {&#xD;&#xA;        // If a document is found, return True (Data exists)&#xD;&#xA;        out_Result = &quot;True&quot;;&#xD;&#xA;    }&#xD;&#xA;    else&#xD;&#xA;    {&#xD;&#xA;       &#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;catch (Exception ex)&#xD;&#xA;{&#xD;&#xA;    out_Result = $&quot;Error: {ex.Message}&quot;;&#xD;&#xA;    System.Console.WriteLine($&quot;Error: {ex.Message}&quot;);&#xD;&#xA;}&#xD;&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="638,197.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ConnectionUri">
+          <Literal x:TypeArguments="x:String">mongodb+srv://bernaural123:Balkaya00@uebung3.sdru7.mongodb.net/?retryWrites=true&amp;w=majority&amp;appName=Uebung3</Literal>
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_Result">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="queryResult" />
+        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_CustomerName">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="io_CustomerName.Replace(&quot;Name: &quot;, &quot;&quot;).Trim()" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_CustomerVehicle">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="io_CustomerVehicle" />
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ServiceCoverage">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="serviceCoverage" />
+        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_CustomerSurname">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="io_CustomerSurname" />
+        </InArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="638,123.33333333333333" sap2010:WorkflowViewState.IdRef="WriteLine_35" Text="[queryResult]" />
+    <If Condition="[queryResult = &quot;True&quot;]" sap:VirtualizedContainerService.HintSize="638,808" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,174" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,114" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="User was found in DB" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,494.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,123.33333333333333" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="No user was found in DB" />
+          <ui:InvokeCode ContinueOnError="{x:Null}" Code="try  &#xA;{&#xA;    // Setup MongoDB connection settings&#xA;    var settings = MongoClientSettings.FromConnectionString(in_ConnectionUri);&#xA;    settings.ServerApi = new ServerApi(ServerApiVersion.V1);&#xA;&#xA;    // Create MongoDB client&#xA;    var client = new MongoClient(settings);&#xA;&#xA;    // Run ping command to check connection&#xA;    out_Result = (client.GetDatabase(&quot;admin&quot;).RunCommand&lt;BsonDocument&gt;(new BsonDocument(&quot;ping&quot;, 1))).ToString();&#xA;    System.Console.WriteLine(&quot;Pinged your deployment. You successfully connected to MongoDB!&quot;);&#xA;&#xA;    // Access the database and collection&#xA;    var database = client.GetDatabase(&quot;customers&quot;); // Replace with your database name&#xA;    var collection = database.GetCollection&lt;BsonDocument&gt;(&quot;CustomerRelation&quot;); // Replace with your collection name&#xA;&#xA;    // Get the name, surname, and vehicle input from UiPath&#xA;    string inputName = in_CustomerName; // Use the UiPath input variable for name&#xA;    string inputSurname = in_CustomerSurname; // Use the UiPath input variable for surname&#xA;    string inputVehicle = in_CustomerVehicle; // Use the UiPath input variable for vehicle&#xA;&#xA;    // Check if the input values are null or empty&#xA;    if (string.IsNullOrEmpty(inputName) || string.IsNullOrEmpty(inputSurname) || string.IsNullOrEmpty(inputVehicle))&#xA;    {&#xA;        out_Result = &quot;Error: Name, Surname or Vehicle input is missing.&quot;;&#xA;        return;&#xA;    }&#xA;&#xA;    // Define the query to match by name, surname, and vehicle&#xA;    var filter = Builders&lt;BsonDocument&gt;.Filter.Eq(&quot;name&quot;, inputName) &amp;&#xA;                 Builders&lt;BsonDocument&gt;.Filter.Eq(&quot;surname&quot;, inputSurname) &amp;&#xA;                 Builders&lt;BsonDocument&gt;.Filter.Eq(&quot;vehicle&quot;, inputVehicle);&#xA;&#xA;    // Check if a document with the specified name, surname, and vehicle exists in the collection&#xA;    var existingDocument = collection.Find(filter).FirstOrDefault();&#xA;&#xA;    if (existingDocument != null)&#xA;    {&#xA;        // If a document is found, return True (Data exists)&#xA;        out_Result = &quot;True&quot;;&#xA;    }&#xA;    else&#xA;    {&#xA;        // If no document is found, insert the new data into the collection&#xA;        var newDocument = new BsonDocument&#xA;        {&#xA;            { &quot;name&quot;, inputName },&#xA;            { &quot;surname&quot;, inputSurname },&#xA;            { &quot;vehicle&quot;, inputVehicle },&#xA;            { &quot;addedAt&quot;, DateTime.UtcNow }  // Optionally, you can store the insertion timestamp&#xA;        };&#xA;&#xA;        // Log the document being inserted for debugging purposes&#xA;        System.Console.WriteLine(&quot;Document to insert: &quot; + newDocument.ToString());&#xA;&#xA;        try&#xA;        {&#xA;            // Insert the new document into the collection&#xA;            collection.InsertOne(newDocument);&#xA;            out_Result = &quot;New data inserted into the database successfully!&quot;;&#xA;            System.Console.WriteLine(&quot;New Data inserted&quot;);&#xA;        }&#xA;        catch (MongoException mongoEx)&#xA;        {&#xA;            // Handle MongoDB-specific errors&#xA;            out_Result = $&quot;MongoDB Error: {mongoEx.Message}&quot;;&#xA;            System.Console.WriteLine($&quot;MongoDB Error: {mongoEx.Message}&quot;);&#xA;        }&#xA;        catch (Exception ex)&#xA;        {&#xA;            // General error handler&#xA;            out_Result = $&quot;Error: {ex.Message}&quot;;&#xA;            System.Console.WriteLine($&quot;Error: {ex.Message}&quot;);&#xA;        }&#xA;    }&#xA;}&#xA;catch (Exception ex)&#xA;{&#xA;    out_Result = $&quot;Error: {ex.Message}&quot;;&#xA;    System.Console.WriteLine($&quot;Error: {ex.Message}&quot;);&#xA;}&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="382,197.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+            <ui:InvokeCode.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_CustomerName">[io_CustomerName.Replace("Name: ", "").Trim()]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_CustomerSurname">[io_CustomerSurname]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_CustomerVehicle">[io_CustomerVehicle]</InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="out_Result">[addedCustomer]</OutArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_ConnectionUri">mongodb+srv://bernaural123:Balkaya00@uebung3.sdru7.mongodb.net/?retryWrites=true&amp;w=majority&amp;appName=Uebung3</InArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,114" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[addedCustomer]" />
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[rescheduleFlag = True]" DisplayName="While Re-schedule is requested" sap:VirtualizedContainerService.HintSize="638,5872.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+      <ui:InterruptibleWhile.Body>
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="606,5741.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Suggest Appointment" sap:VirtualizedContainerService.HintSize="572,5681.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MultipleAssign DisplayName="Find Available Date &amp; Time" sap:VirtualizedContainerService.HintSize="538,179.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[suggestedAppointmentDate]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[today.AddDays(7).ToString().Split(" "c)(0)]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[suggestedAppointmentTime]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[DateTime.Today.Add(New TimeSpan(New Random().Next(0, 7 * 60), 0, 0)).ToString("HH:mm")]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="538,123.33333333333333" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[suggestedAppointmentDate + &quot; -- &quot; + suggestedAppointmentTime]" />
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Demos  FullCalendar" sap:VirtualizedContainerService.HintSize="538,3373.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="01f3c703-55d4-45d4-b92d-17a53b32b248" Version="V2" WindowResize="Maximize">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="504,3122.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'DIV'" sap:VirtualizedContainerService.HintSize="470,139.33333333333334" sap2010:WorkflowViewState.IdRef="Activate_2">
+                      <ui:Activate.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7d3607cf-2b01-4129-afb5-51ddc50411db" InformativeScreenshot="ca2191c49b5f81572436e620f45f1b5c" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div' idx='5' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                        </ui:Target>
+                      </ui:Activate.Target>
+                    </ui:Activate>
+                    <uix:NGetText DisplayName="Get Text 'December 2024'" sap:VirtualizedContainerService.HintSize="470,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="01f3c703-55d4-45d4-b92d-17a53b32b248" TextString="[currentMonth]" Version="V4">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="fullcalendar.io/demos" CVScreenId="55a2b070-831d-47fc-9732-e1d2f22f8812" ContentHash="S2yl8DGBX0KFI_vLKteHGQ" CvTextArea="1005, 362, 272, 33" CvType="AnyWordGroup" DesignTimeRectangle="1004, 361, 273, 33" DesignTimeScaleFactor="1.5" ElementType="Text" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl tag='H2' class='fc-toolbar-title' id='fc-dom-*' innertext='*{DateTime.ParseExact(suggestedAppointmentDate, &amp;quot;MM/dd/yyyy&amp;quot;, System.Globalization.CultureInfo.InvariantCulture).ToString(&amp;quot;MMMM&amp;quot;)}*' /&gt;" Guid="cae1b132-6162-4ce5-8c16-334c6ce6f4bd" ImageBase64="" InformativeScreenshot="dd1462924523c449cc22fa1bb7fb4735.png" Reference="r2aVhoRjsEybYC389EQ7Qw/40tcd88k0UWJw3p9Unkdeg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Demos | FullCalendar' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="515, 351, 1322, 52" FuzzySelectorArgument="&lt;webctrl type='' parentid='demo-content' tag='DIV' class='fc-header-toolbar fc-toolbar fc-toolbar-ltr' aaname='' check:innerText='today&amp;#xA;December 2024&amp;#xA;month&amp;#xA;week&amp;#xA;day&amp;#xA;list' /&gt;" Guid="24dead84-b50a-4e16-9b18-4319219cd192" SearchSteps="FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                          <uix:TargetAnchorable.PointOffset>
+                            <uix:PointOffset X="1" Y="-1" />
+                          </uix:TargetAnchorable.PointOffset>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text 'Selectable Dates(1)'" sap:VirtualizedContainerService.HintSize="470,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="01f3c703-55d4-45d4-b92d-17a53b32b248" ScrapingMethod="TextAttribute" TextString="[block]" Version="V4">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="fullcalendar.io/demos" CVScreenId="40b00305-1c60-4b70-9cfa-86deff782bae" ContentHash="lsxQDpnpWUaL7dsrsKx83w" CvElementArea="340, 505, 25, 30" CvTextArea="50, 509, 166, 21" CvTextArgument="Selectable Dates" CvType="ArrowButton" DesignTimeRectangle="11, -219, 1063, 1168" DesignTimeScaleFactor="1.5" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl aria-role='tab' tag='DIV' type='' class='accordion__panel-title' /&gt;" Guid="719b6517-2e21-4a05-92b1-e344571615ca" InformativeScreenshot="d666469f57beba3963a379e62e2617dc.png" Reference="r2aVhoRjsEybYC389EQ7Qw/8Zst3Ci38UGFOQSAzrYh4g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Demos | FullCalendar' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="0dcc74cc-902c-4c38-9e67-b46ec64b9db9" CvElementArea="340, 505, 25, 30" CvTextArea="50, 509, 166, 21" CvTextArgument="Selectable Dates" CvType="ArrowButton" DesignTimeRectangle="34, 484, 345, 72" FuzzySelectorArgument="&lt;webctrl aaname='Selectable Dates' aria-role='tab' tag='DIV' type='' class='accordion__panel-title' check:innerText='Selectable Dates' /&gt;" Guid="a91951ac-ce92-4204-bba7-797f9e18cd0c" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayBefore="0.2" DisplayName="Keyboard Shortcuts 'Selectable Dates'" sap:VirtualizedContainerService.HintSize="470,234.66666666666666" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" ScopeIdentifier="01f3c703-55d4-45d4-b92d-17a53b32b248" Shortcuts="[d(hk)][k(PgDn)][u(hk)]" Version="V4">
+                      <uix:NKeyboardShortcuts.Target>
+                        <uix:TargetAnchorable BrowserURL="fullcalendar.io/demos" CVScreenId="f2ff1215-d7c7-4f31-9967-694576e4bd45" ContentHash="Mbccr_Of1k6KoY4KeQZIgw" CvElementArea="362, 654, 27, 32" CvTextArea="71, 659, 166, 21" CvTextArgument="Selectable Dates" CvType="ArrowButton" DesignTimeRectangle="56, 295, 345, 71" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl aaname='Selectable Dates' aria-role='tab' inner-text='' tag='DIV' /&gt;" Guid="bb3a5439-e2ce-4a4b-8fc0-4c9136a56071" ImageBase64="" InformativeScreenshot="4a9214ef6061abbbe33e92923796a123.png" Reference="r2aVhoRjsEybYC389EQ7Qw/2rlw33DNm0aIJft0Wx5vNw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Demos | FullCalendar' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Complete">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                              <uix:Target CVScreenId="f2ff1215-d7c7-4f31-9967-694576e4bd45" CvTextArea="71, 659, 166, 21" CvTextArgument="Dates" CvType="Text" DesignTimeRectangle="179, 321, 58, 19" ElementType="Text" Guid="0c219b0f-70b8-4c07-a33b-66324d4e466f" ImageBase64="" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                              <uix:Target CVScreenId="f2ff1215-d7c7-4f31-9967-694576e4bd45" CvTextArea="71, 659, 166, 21" CvTextArgument="Selectable Dates" CvType="Text" DesignTimeRectangle="71, 319, 166, 21" ElementType="Text" Guid="3eecbc7e-c294-497a-b11f-fb21a1fc1791" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NKeyboardShortcuts.Target>
+                    </uix:NKeyboardShortcuts>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Selectable Dates'" sap:VirtualizedContainerService.HintSize="470,228" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="01f3c703-55d4-45d4-b92d-17a53b32b248" Version="V4">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="fullcalendar.io/demos" CVScreenId="f2ff1215-d7c7-4f31-9967-694576e4bd45" ContentHash="Mbccr_Of1k6KoY4KeQZIgw" CvElementArea="362, 654, 27, 32" CvTextArea="71, 659, 166, 21" CvTextArgument="Selectable Dates" CvType="ArrowButton" DesignTimeRectangle="56, 295, 345, 71" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl aaname='Selectable Dates' aria-role='tab' inner-text='' tag='DIV' /&gt;" Guid="bb3a5439-e2ce-4a4b-8fc0-4c9136a56071" ImageBase64="" InformativeScreenshot="4a9214ef6061abbbe33e92923796a123.png" Reference="r2aVhoRjsEybYC389EQ7Qw/2rlw33DNm0aIJft0Wx5vNw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Demos | FullCalendar' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                              <uix:Target CVScreenId="f2ff1215-d7c7-4f31-9967-694576e4bd45" CvTextArea="71, 659, 166, 21" CvTextArgument="Dates" CvType="Text" DesignTimeRectangle="179, 321, 58, 19" ElementType="Text" Guid="0c219b0f-70b8-4c07-a33b-66324d4e466f" ImageBase64="" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                              <uix:Target CVScreenId="f2ff1215-d7c7-4f31-9967-694576e4bd45" CvTextArea="71, 659, 166, 21" CvTextArgument="Selectable Dates" CvType="Text" DesignTimeRectangle="71, 319, 166, 21" ElementType="Text" Guid="3eecbc7e-c294-497a-b11f-fb21a1fc1791" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <If Condition="[currentMonth.Split(&quot; &quot;c)(0) = DateTime.ParseExact(suggestedAppointmentDate, &quot;MM/dd/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture).ToString(&quot;MMMM&quot;)]" sap:VirtualizedContainerService.HintSize="470,2076.6666666666665" sap2010:WorkflowViewState.IdRef="If_2">
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,1853.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_7">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[currentDay]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[DateTime.Parse(suggestedAppointmentDate).Day.ToString()]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_20">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[currentDay]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">29</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,123.33333333333333" sap2010:WorkflowViewState.IdRef="WriteLine_18" Text="[currentDay]" />
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="5" DisplayName="Click 'Current Day'" sap:VirtualizedContainerService.HintSize="434,190.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="01f3c703-55d4-45d4-b92d-17a53b32b248" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="fullcalendar.io/demos" CVScreenId="e2341a2f-fd08-43bf-a119-329c9aae04ff" ContentHash="XEHORlCCCUeLsSBnVUsy-w" DesignTimeRectangle="894, 24, 187, 157" DesignTimeScaleFactor="1.5" FuzzyAccuracy="1" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='fc-daygrid-day-frame fc-scrollgrid-sync-inner' tag='DIV' aaname='' check:innerText='{0}' /&gt;&quot;, currentDay)]" Guid="bd1346fc-5d6f-451f-8922-64faedf517db" ImageBase64="" InformativeScreenshot="566bae0baf63c6d9b500e604b591d9db.png" Reference="r2aVhoRjsEybYC389EQ7Qw/_3HVqJZG_0u4fH8JqdKL1Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Demos | FullCalendar' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="e2341a2f-fd08-43bf-a119-329c9aae04ff" DesignTimeRectangle="1044, 24, 37, 37" ElementType="Text" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='fc-dom-105' type='' tag='A' class='fc-daygrid-day-number' aaname='{0}' check:innerText='{0}' /&gt;&quot;, currentDay)]" Guid="812b824e-86a5-4f8c-9b88-ffc110d399a4" ImageBase64="" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                                <uix:TargetAnchorable.PointOffset>
+                                  <uix:PointOffset Position="BottomRight" X="-62" Y="-53" />
+                                </uix:TargetAnchorable.PointOffset>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NCheckElement DelayBefore="0" DisplayName="Check Element 'pane'" sap:VirtualizedContainerService.HintSize="434,190.66666666666666" sap2010:WorkflowViewState.IdRef="NCheckElement_1" Result="[popUpAppeared]" ScopeIdentifier="01f3c703-55d4-45d4-b92d-17a53b32b248" Version="V4">
+                            <uix:NCheckElement.Target>
+                              <uix:TargetAnchorable BrowserURL="fullcalendar.io/demos" ContentHash="2kiB4_r9aUO6GoCth1A5Pg" DesignTimeRectangle="624, 128, 694, 348" DesignTimeScaleFactor="1.5" FuzzySelectorArgument="&lt;ctrl name='fullcalendar.io says' role='dialog' /&gt;&lt;ctrl automationid='' role='pane' check:fulltext='fullcalendar.io says&amp;#xD;&amp;#xA;OK&amp;#xD;&amp;#xA;Cancel' /&gt;" Guid="c14cbc7e-1471-4f2d-b6a4-93ccb1039643" InformativeScreenshot="caab6eb6ae16cb9f70800af3cc09ea70.png" Reference="r2aVhoRjsEybYC389EQ7Qw/2jzWogtCdUyTYT8GiwYvdg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Demos | FullCalendar - Google Chrome' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                                    <uix:Target DesignTimeRectangle="635, 213, 672, 61" FullSelectorArgument="&lt;ctrl name='fullcalendar.io says' role='dialog' /&gt;&lt;ctrl idx='9' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl name='fullcalendar.io says' role='dialog' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="b77fc18d-3675-4fd7-bed6-8507b28127cc" SearchSteps="Selector, FuzzySelector" />
+                                    <uix:Target CVScreenId="c8d4770b-36f6-451e-bb5b-8e552bdda6f4" CvElementArea="661, 281, 618, 60" CvType="InputBox" DesignTimeRectangle="665, 285, 612, 55" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='fullcalendar.io says' role='dialog' /&gt;&lt;ctrl name='Create an event from 2024-12-24 to 2024-12-25 (excl). Enter a ti*' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='fullcalendar.io says' role='dialog' /&gt;&lt;ctrl name='Create an event from 2024-12-24 to 2024-12-25 (excl). Enter a ti*' role='editable text' automationid='' /&gt;" Guid="d6206ee4-a7f6-492a-b8fd-4ff8d0cd82d0" SearchSteps="Selector, FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NCheckElement.Target>
+                          </uix:NCheckElement>
+                          <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'editable text'" sap:VirtualizedContainerService.HintSize="434,188.66666666666666" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="[io_CustomerName + &quot;---&quot; + io_CustomerVehicle]">
+                            <ui:SetValue.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="537157ab-f065-448c-ad8f-bde9d38daa18" InformativeScreenshot="10a3747ab103e6a73a488cb682177915" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Demos | FullCalendar - Google Chrome' /&gt;&lt;ctrl name='fullcalendar.io says' role='dialog' /&gt;&lt;ctrl name='Create an event from 2024-12-* to 2024-12-* (excl). Enter a title:' role='editable text' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SetValue.Target>
+                          </ui:SetValue>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="434,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="01f3c703-55d4-45d4-b92d-17a53b32b248" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="fullcalendar.io/demos" CVScreenId="fec43164-82dd-4734-8375-854275539b1f" ContentHash="MU1CD4GceUCz__9NnWYy9g" CvElementArea="1049, 373, 111, 62" CvTextArea="1089, 395, 31, 19" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1052, 375, 107, 58" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;ctrl name='fullcalendar.io says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='fullcalendar.io says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="59d1656c-7e87-4ef4-8a3d-69619f47b533" InformativeScreenshot="a99a86ea0deccbdae5dd9c9991bf722e.png" Reference="r2aVhoRjsEybYC389EQ7Qw/W1-OYKiwnEu-X1sPN_a7yQ" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Demos | FullCalendar - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.PointOffset>
+                                  <uix:PointOffset X="-1" Y="-3" />
+                                </uix:TargetAnchorable.PointOffset>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="434,229.33333333333334" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" OutImage="[arrangedAppointment]" SaveScreenshotTo="Image" Version="V4">
+                            <uix:NTakeScreenshot.SavedTo>
+                              <OutArgument x:TypeArguments="x:String">[screenshotPath]</OutArgument>
+                            </uix:NTakeScreenshot.SavedTo>
+                          </uix:NTakeScreenshot>
+                          <ui:SaveImage DisplayName="Save Image" FileName="Screenshots Entered Appointments\Untitled.png" sap:VirtualizedContainerService.HintSize="434,169.33333333333334" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[arrangedAppointment]" />
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="Appointment was created for the next month" />
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,114.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_19" Text="Appointment details shared with the customer, waiting for the response!" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="VA86wbSJok2C201wzujz9g" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAELSURBVFhH7dfBCgFBHMfxvbhyRpHyFryGBxDPsJLCRZ5hb7yQA044ODi7KELi+9t2JevgYHZKM/Vpm9np///tRO16eX8e4IR7ytQzUIDjy2Lajgrw6UZqXAAX4D3AGTtsDdrjY4Ar+qighLIBqlvDDIkAevIqPFOj4C/UT8ZIBNDxKGW03cxQfQzgArgALoAL8NsArfXNa66ukkMDveiqeXhfQ/Xx+wBqgiwmuOAeXTXXerhP9WEsgJ74DDWPaa71cJ/qw1iALl6bx7Qe7lN9/O8J2PsNtDeW/wXfDtWHnQDFzjIOMEQigF4W6/AKHTMhVBsZTJEIIHpZHEFHZMoEBzwDWP84tfh5Pg8e0Cd7tRMy+l8AAAAASUVORK5CYII=" InformativeScreenshot="cca1fe5ac807160a2f381730784b1edb.jpg" Reference="r2aVhoRjsEybYC389EQ7Qw/8pHtCkhwxU2s-xUPTKEA9g" Selector="&lt;html app='chrome.exe' title='Demos | FullCalendar' /&gt;" Title="Demos | FullCalendar" Url="https://fullcalendar.io/demos" Version="V1" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+            <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[&quot;Dear &quot; + io_CustomerName.Replace(&quot;Name: &quot;, &quot;&quot;).Trim() + &quot;,&quot; + Environment.NewLine +&#xA;&quot;Your appointment is scheduled and the details are below: &quot; + Environment.NewLine + &#xA;&quot;Appointment Date: &quot; + suggestedAppointmentDate + Environment.NewLine +&#xA;&quot;Appointment Time: &quot; + suggestedAppointmentTime + Environment.NewLine +&#xA;&quot;Best regards,&quot; + Environment.NewLine + &#xA;&quot;Flash Services&quot;]" ConnectionId="3a537b0e-bad3-4407-b69f-30f3765c0dcf" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="538,497.3333333333333" sap2010:WorkflowViewState.IdRef="SendEmailConnections_2" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Appointment suggestion" To="[New List(Of String) From {out_Email.From.Address}]" UseConnectionService="True">
+              <uga:SendEmailConnections.Attachments>
+                <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
+              </uga:SendEmailConnections.Attachments>
+              <uga:SendEmailConnections.AttachmentsBackup>
+                <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugage:AttachmentInputMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:SendEmailConnections.AttachmentsBackup>
+              <uga:SendEmailConnections.InputTypeBackup>
+                <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:SendEmailConnections.InputTypeBackup>
+            </uga:SendEmailConnections>
+            <uga:WaitForEmailReceivedConnections ConnectionAccountName="{x:Null}" JobData="{x:Null}" AuthScopesInvalid="False" ConnectionId="3a537b0e-bad3-4407-b69f-30f3765c0dcf" DisplayName="Wait for Email Received and Resume" sap:VirtualizedContainerService.HintSize="538,240" sap2010:WorkflowViewState.IdRef="WaitForEmailReceivedConnections_3" IncludeAttachments="False" MarkAsRead="True" Result="[out_Response]" UseConnectionService="True" WithAttachmentsOnly="False">
+              <uga:WaitForEmailReceivedConnections.Filter>
+                <ugagf:TriggerMailFilterWithVariablesCollection LogicalOperator="Or">
+                  <ugagf:TriggerMailFilterWithVariablesCollection.Filters>
+                    <ugagf:TriggerMailFilterElementWithVariables ArrayStringOperator="Contains" BodyOperator="Contains" CollectionFilterOperator="In" Criteria="Subject" InStringValue="Re: Appointment suggestion" SenderRecipientOperator="Contains" StringOperator="Contains" TypeValue="Email" />
+                    <ugagf:TriggerMailFilterElementWithVariables ArrayStringOperator="Contains" BodyOperator="Contains" CollectionFilterOperator="In" Criteria="Body" InStringValue="Confirm" SenderRecipientOperator="Contains" StringOperator="Contains" TypeValue="Email" />
+                    <ugagf:TriggerMailFilterElementWithVariables ArrayStringOperator="Contains" BodyOperator="Contains" CollectionFilterOperator="In" Criteria="Body" InStringValue="Re-schedule" SenderRecipientOperator="Contains" StringOperator="Contains" TypeValue="Email" />
+                    <ugagf:TriggerMailFilterElementWithVariables ArrayStringOperator="Contains" BodyOperator="Contains" CollectionFilterOperator="In" Criteria="Body" InStringValue="Cancel" SenderRecipientOperator="Contains" StringOperator="Contains" TypeValue="Email" />
+                  </ugagf:TriggerMailFilterWithVariablesCollection.Filters>
+                </ugagf:TriggerMailFilterWithVariablesCollection>
+              </uga:WaitForEmailReceivedConnections.Filter>
+              <uga:WaitForEmailReceivedConnections.Folder>
+                <ugagm:FolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolderName="{x:Null}" BrowserFolderId="INBOX" BrowserFolderName="Inbox" ConnectionKey="3a537b0e-bad3-4407-b69f-30f3765c0dcf" InputMode="Browse">
+                  <ugagm:FolderArgument.Backup>
+                    <usau:BackupSlot x:TypeArguments="ugage:FolderInputMode" StoredValue="Browse">
+                      <usau:BackupSlot.BackupValues>
+                        <scg:Dictionary x:TypeArguments="ugage:FolderInputMode, scg:List(x:Object)" />
+                      </usau:BackupSlot.BackupValues>
+                    </usau:BackupSlot>
+                  </ugagm:FolderArgument.Backup>
+                </ugagm:FolderArgument>
+              </uga:WaitForEmailReceivedConnections.Folder>
+            </uga:WaitForEmailReceivedConnections>
+            <If Condition="[out_Response.Body.ToString().Contains(&quot;Confirm&quot;)]" sap:VirtualizedContainerService.HintSize="538,1070.6666666666667" sap2010:WorkflowViewState.IdRef="If_3">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="504,168" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="470,108" sap2010:WorkflowViewState.IdRef="Assign_9">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[rescheduleFlag]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="504,762.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:IfElseIfV2 Condition="[out_Response.Body.ToString().Contains(&quot;Cancel&quot;)]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="470,702.6666666666666" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+                    <ui:IfElseIfV2.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,114.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_21" Text="Re-schedule is requested" />
+                      </Sequence>
+                    </ui:IfElseIfV2.Else>
+                    <ui:IfElseIfV2.ElseIfs>
+                      <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True" />
+                    </ui:IfElseIfV2.ElseIfs>
+                    <ui:IfElseIfV2.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,349.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="434,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_10">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[rescheduleFlag]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="WriteLine_23" Text="Appointment was cancelled" />
+                        <ui:Break sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="Break_1" />
+                      </Sequence>
+                    </ui:IfElseIfV2.Then>
+                  </ui:IfElseIfV2>
+                </Sequence>
+              </If.Else>
+            </If>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="538,114.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_20" Text="[out_Response.Body.ToString()]" />
+          </Sequence>
+        </Sequence>
+      </ui:InterruptibleWhile.Body>
+    </ui:InterruptibleWhile>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="638,124" sap2010:WorkflowViewState.IdRef="WriteLine_27" Text="[serviceCoverage]" />
+    <Sequence DisplayName="Check service coverage package" sap:VirtualizedContainerService.HintSize="638,4324.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_15">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If Condition="[serviceCoverage = &quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="604,1699.3333333333333" sap2010:WorkflowViewState.IdRef="If_4">
+        <If.Then>
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="536,292" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="502,124" sap2010:WorkflowViewState.IdRef="WriteLine_24" Text="Your service package covers it!" />
+            <Assign sap:VirtualizedContainerService.HintSize="502,108" sap2010:WorkflowViewState.IdRef="Assign_11">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[priceString]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">0</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="536,1267.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_17">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="502,124" sap2010:WorkflowViewState.IdRef="WriteLine_25" Text="Your service package does not cover it!" />
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Preisliste für Räder- und Reifenmontag" sap:VirtualizedContainerService.HintSize="502,1083.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="247de938-d121-4d46-a13b-192866500dce" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,841.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="dt_Preise" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_Preise]" DisplayName="Extract Table Data 'Extract Table Data'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0' ReferenceIdx='0' Name='Column-0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-1' ReferenceIdx='1' Name='Column-1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='fulltext' /&gt;&lt;column name='Column-1' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="434,192" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="247de938-d121-4d46-a13b-192866500dce" Version="V4">
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable BrowserURL="https://reifentechnik-schmidt.de/reifenservice/preisliste-fuer-raeder-und-reifenmontage/index.html" ContentHash="IpHmWveNwEebERi1PWc_gw" DesignTimeRectangle="86, 277, 1177, 673" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="744d1346-fe0a-472c-8f0d-b9e7e3bbea42" InformativeScreenshot="4e885bd0b47bddb3cf450faf9899f2cc.png" Reference="r2aVhoRjsEybYC389EQ7Qw/l9cWiV3jV0u6LXPviSpPig" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Preisliste für Räder- und Reifenmontage' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                      </uix:NExtractData.Target>
+                    </uix:NExtractData>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_18">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[priceString]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(dt_Preise.Rows(0)(1).ToString(), "[^\d,]", "").Replace(",", ".")]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_19">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[price]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[((Decimal.Parse(priceString))*4-2.00).ToString()]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_Preise]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,352" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,114.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_33" Text="[CurrentRow(0).ToString() + CurrentRow(1).ToString()]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                    </ui:ForEachRow>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="4GNlmpzTa021jwJIMMvb5A" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAwASURBVGhDxZl7cFTVHcd3pqOgKAQEFeQRIIQ8N5vdBAOBsHkIkUcSOu2M01GTmb7sHx1mnOlMq22DM7X1nRgeawMhPATbUsWq02kryQaSGINI9I+q40xZwIQQKNkkqAR295x+f79zzr131wCiaM/Md76/3++cm/v5nXvusgmu6zFCfk/SmRJvzZmy/LqB0rz9Z0rzQ2dL8sIDJXlyoCRfni3NR+wLoR48U5JX11fqq+r3e5L15f+fQdDnSvPXnynOCxpQ5Y642ORKp4t9WjTnE6eLvT0Dfl/1t9oMgZ8tWVR7tsQ3iN0UCtQX5wrQuF2zwXUzfq847SdnNX/jjeBY1AJaHw0NocEYjup+AqQ6QwEQkIj7DSjHXs6VTEzuxfXeWn276zdoZwaK83t4N3kHfXonbTegZlcNkAG38uWmTnGuoPwUK5dzcuSh6/Y0BvyLqgEZtnfSq3bSAnXCGjAFBQegDWl5EYEqaFZRnLiJvqLc8MllniqN8dUGPU4Da8Cs3SQ4dgDCDaCSglCuQQEGKB17BMFyzu7hWMnE8GXQUs9XO1L9Rd7auN21YBwxAShnYIoNCM/pOK62zINGPMoBqJ1j9qV23AvvXZqDJtzX1gTAq81jvuJj164A9Y5ZkNoVjILTdQYzdQATpC0FbfQJeWGO6C/yVGu8Kw96eQA7SGAMjZsSqLWDWtYu2rvJMUPBLcilObyT7IAxnigCZVhHzCo0cg/2F6Rd/cUGbMi5iwRkdtLsmrV7JA0YJ2sXE3OtQrewgCk2kEsodhOskjNfki1OLHH3aMyxB70w1i5CTvB4QAcMNNauMpx2vYMOZ4mTzhoAVe6WJ5fYrpRtRE1s0Ljxw/NSVfIzDxdbu6mhVAMWkDPOsXaRcwD1lhfK4aaAHD36joyc6pPWiIxIMXxExo4/I6M9FTLanQf5SCL6NjlychNjLmbNUd3rVFj2eJI0tj18e9ftKNpRJY+uyjeAFpwC1MB6l5y72v+9cob+skOceR2NrGGgWLdXRLtzAUvSkN3kuXCu65jWqjzS5Yl/Cp7mqmTv3u9KH/Sz361wAiZAK9Gj5seNRxquf1LGRkY0mhqnwkK+8d5FuTU4Khuhto8uyY/7o3pWjyieyomnAeQBnEc5w6o8RrUuqikBGp5j6vFPwbunqiZ3b5XI3VMlvXvWyb9//24NqM6p8yzyWVWxGNq2RdOo8XrPRfnQjk9lfu2QXLRhmD1/gxbiyvrzWHNJr1Yj9kmAwSAZ7coBKBxxjMB1HOlyq7grG/AUuzHvXq/xqYF1PYAXBE+NPPhUOcNaL9Bigs6WJ4wWZ8vB+ic0Au14TP60WYHnaeA8irW4Tq6borV0jRmx408xlAYTka5sDZsNeI6N0GiWrmcFGZ6Oj+fFSuFBA7kvVkkPRL75oaXi5OIscWJxFgPrmPO+dSuFOTYEsrZuJA7Y91tbVs0xT6JrrCbwkkePlgOe4FiAZdnxW+SZWJNp1WQwOcnl2bO20rO7UiaqsKlCfrDcLU4UZInjBdRElmQvyBTn33hV3RjjJ9vPAzTskIL1xtXCdo45k/8Y15ohhg9r6EwRg6JvZTJwtCsDcQYaQExONc6hjowal2dXRV3OrgqpVMlODeTsrhBP/HyZBR26O1OGCjJl77oV+pZSvoYzTyBjSzUxtuy5145e1D8N7/XhAhuOlW55BIp1paMZitOUOhbWu3J2rg26d1ZI964K4WzCvWutoHr3PR7J8FrnnvuDvp2Uq58dlrm/CdsCUFx+OTnW/cjxFGInN2noNBJg00RMOdcinQutuUgn5emvUgMh98618jISP/h9mTi+KEOElOSFdw/zzT7Cx6IHACQCMfGVNThGLWy9C2KoWwESKMMuVNCdqULVUlFDTEIc60wNubJ3rhHuHYCFsllrVIw6xVR7vcrLDRxDA+blbf3gkswBEOvX2jWgcmfNWYfTesis+Zs5RqO9AAYka4HDLYlIh/JoZwqOUErYld1MkIAlv4xKG8plKD9dHMtLE+pOUgZaL0g3IIwMbFxtjNjAO+tbWj7XPxXvQQeDATKFIW3NF9GO+TzPOcVwV9aO1SILkPFaLbO2QyoWmVD9Dwvksbx0qwG6qYFwKvsKeeKcqcU1QKAWrNE8pc75aI5jrJnHsStr+5pwZvMqkUnAEMXsTatUzlolFgXK5fuFGfiS1ss3evXoqMx+dFBmPXqOnUDYnXGCm7VZVHPUW3AceUSGDSA0F8dlLvK5JucaOdfbk7nmyti+KqQgV0vEwgKHG1Gd9Mv1hfLzI918rz68eASkpODGVuLcF9d+eEp9TxJDXQoUcARoFO2YI6hm6pxzbU7IlbFt1X5IZhjYbfcmxPcKFsVYd+SvjXwzGjXbhmUmADIBpfzateKZIf3T8DH6n8cAOAeg8Yq0z4bPBvRsQbGVt88JujKbVtcpOA1LzZgcSt9WLtLZ7yUX99VV6ttJuf/dizLjkXMyAyAsxATFtavIrNv/7qj+aWjgnSWAnAUwApwlYogj7bNk5NAszsktUf3gzHpXWmN5jYKEtpZLEoNvNVI1JZV3n3pf31LK6q0jMh0gRgSV/sh/LVDnXPyac7h2WP8UHJ+BfRpuJivaPhON3AXNBDhyrt2l4natQzMq8WXOn8RwjeUybetKbgJNIS4X7E5RDWtKX6qWIxc/5Rv3DsZk2VNhmQZoAk/7lXI7PmfVaI2plT0dlr36H7CR0U+x+wWAu0uBHpqh4xki6nCqRQ7NUHn7DCGDd6pf8tMaVwYhDUq+EvDwP5qarlOua4+/FeCb06AmHsRuEtwXpBtw6gGspWvMGPr4MQ1NcNMBOx3xdByR6VYebWennOuxg9PtX/AXNq5cvxBgtlYIR5xQh15QtY1HdmsENV45MipLnhyUqYBcCBk3eqBxSL7iOPM0Xn6/SQ4G6dgosMjBOy1FD90JaDu36kr234mS6/xJAAunAo7EgBqSPNWI5vWcqdGToCPgHB/2ReWb/74oG978TG488BkauxC34zRGRs/LxzsDct9r+PJ26A6h4O7QMRwiV7odOUso3YHfBfTxMQNwtRZogPwekRq4BzGE2gKdLwjAdY6Y5/177hcvf/RPjXb18Xbfe9L/4v3C37QcsLczoIKcBrhpdq1tGovglU8V7G3TmjW2PegpAGjQgC3YwrBKW8ricm7E5DSnc//u++XjHQEG/GTktMaVHFOt4fAu6dtepa7FdScO4FPFApsKyKnxcdtUNGTnkbbbWBeCSWP/hS4lsKI2RcOmBMqEBc5upHKswzzWOWKub9ZCzXKed9ZKxS/2egF7GwGyKziCnqJj0pQ4p7nYwSlX/kMvbtBjQWgZ+JTNpVrO+cTcWTPrS+X8zaUKHrE34JfH/4UXUUMxYJAgp1CufbLgWnAycggea5t8TGNefiQH/Mm4SXj+JtxUiwEcTjDKS4QB4xoLNX2dtcaZbyqR9fvSATeZIBVoW5KIQpFgkq5RTtCTuKY0KSwvd3QSx/yGkpp5m0oEydxUCfFGOAn5PLi9Rs3xdaZOzmvt65Y1LtWgNpyKJ2ngSTJq+UQRaZ3IHg0mXdv/1qRsLNvAIGOq2IK0ag3FCWtszeX1Sn95BV+NCcwABicCXDvD3groW6mmRHHLxLH/oHu1gZvXMhhEEHONM4wCQ03Ma0BMc855nRsn3deUp4AcAjBAE2u3YMcpvkXGgrd8vf+1xMdrFW4eTn7eb0M+XyyTG/yAhxCb2lysoTrP0ZqE/Pg/8HICjsDiNQH1CahPQHyziEKIw5daJtRojK830EQy4EIM+DyA6rWrXMfLKVdzRtb8cvHwziwFx6A3Sw2pXectN+G4QK0398jg+C/3wl7LAEytAZtDwPXLGXROPcXKrbhOzZEKNxdg9/GpAlCWBo223mRBR1vHIx4XjrSM/2rn/csOehqAamZYQDo1+7kibmB2PZzyuiKub/0zfg1kwPGA1TowzoqjrTcOwmvxMfnF/7j4pgY3UuevAWAPg6sGnEKtSC7ZVABIgtUCeLRlnIgcuBHg44KXguPWf6vgYw3dTBV2vG7Ws8uCgA9RE4jFn/bhl5CWG/BC3hAC9H40UXcp+J3q6wPtcv0P8b6M+c3aLu0AAAAASUVORK5CYII=" InformativeScreenshot="a13b7bd6aa22558a67955a717f58de3c.jpg" Reference="r2aVhoRjsEybYC389EQ7Qw/R-jo7OozzES2VA24zcIYlA" Selector="&lt;html app='chrome.exe' title='Preisliste für Räder- und Reifenmontage' /&gt;" Title="Preisliste für Räder- und Reifenmontage" Url="https://reifentechnik-schmidt.de/reifenservice/preisliste-fuer-raeder-und-reifenmontage/index.html" Version="V1" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </If.Else>
+      </If>
+      <Assign sap:VirtualizedContainerService.HintSize="604,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_15">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[invoiceNumber]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[New Random().Next(1000, 10000).ToString()]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:BuildDataTable DataTable="[dt]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="604,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Number&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Customer_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+      <ui:InvokeCode ContinueOnError="{x:Null}" Code="in_dt.Rows.Add(invoiceNumber, io_CustomerName,Date.Today.ToString(&quot;MM/dd/yyyy&quot;),in_price)" DisplayName="Private: Invoke Code" sap:VirtualizedContainerService.HintSize="604,197.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt">
+            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="invoiceNumber">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="invoiceNumber" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="io_CustomerName">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="io_CustomerName.Replace(&quot;Name: &quot;, &quot;&quot;).Trim()" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_price">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="price" />
+          </InArgument>
+        </ui:InvokeCode.Arguments>
+      </ui:InvokeCode>
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="604,358.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_19">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,114.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_28" Text="[CurrentRow(0).ToString() + CurrentRow(1).ToString() + CurrentRow(2).ToString() + CurrentRow(3).ToString()]" />
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+      </ui:ForEachRow>
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="604,1451.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+        <ueab:ExcelProcessScopeX.Body>
+          <ActivityAction x:TypeArguments="ui:IExcelProcess">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="570,1332" sap2010:WorkflowViewState.IdRef="Sequence_29">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="536,1272" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="Maximize" SensitivityOperation="None" WorkbookPath="Invoice_Template.xlsx">
+                <ueab:ExcelApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    </ActivityAction.Argument>
+                    <Sequence sap:VirtualizedContainerService.HintSize="502,968.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,908.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <umae:WriteRangeConnections BrowserParentItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" BrowserDriveId="b!rUA5skaiBE2YvESeSpKi_sNTrZMA3g1JtpEtI_KuM0vMYjwDSNnVSK_92jIT6MO5" BrowserDriveName="Dokumente" BrowserItemFriendlyName="Invoice_Template.xlsx" BrowserItemId="01J4JOQ3BJFS25NBFQ2BCLZBXWAZ6N22XU" BrowserSiteUrl="https://roboyo-my.sharepoint.com/personal/berna_ural_roboyo_de/_layouts/15/Doc.aspx?sourcedoc=%7BD6B52C29-B084-44D0-BC86-F6067CDD6AF4%7D&amp;file=Invoice_Template.xlsx&amp;action=default&amp;mobileredirect=true" ConnectionId="5a2794d2-ed5c-4de8-b799-736e35a42fea" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="434,397.3333333333333" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_1" IncludeHeaders="False" ItemSelectionMode="Browse" Range="Invoice!B2:E2" RangeMode="Default" RowPosition="0" Source="[dt]" UseConnectionService="True" WorkingWithTemplateWorkbook="False" WriteMode="Overwrite">
+                          <umae:WriteRangeConnections.DriveItemArgument>
+                            <umafm:DriveItemArgument BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" FullPathHint="{x:Null}" Item="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" BrowserDriveId="b!rUA5skaiBE2YvESeSpKi_sNTrZMA3g1JtpEtI_KuM0vMYjwDSNnVSK_92jIT6MO5" BrowserDriveName="Dokumente" BrowserItemFriendlyName="Invoice_Template.xlsx" BrowserItemId="01J4JOQ3BJFS25NBFQ2BCLZBXWAZ6N22XU" BrowserSiteUrl="https://roboyo-my.sharepoint.com/personal/berna_ural_roboyo_de/_layouts/15/Doc.aspx?sourcedoc=%7BD6B52C29-B084-44D0-BC86-F6067CDD6AF4%7D&amp;file=Invoice_Template.xlsx&amp;action=default&amp;mobileredirect=true" ConnectionKey="5a2794d2-ed5c-4de8-b799-736e35a42fea" ItemSelectionMode="Browse" ParentFullPathHint="">
+                              <umafm:DriveItemArgument.ItemIdBackup>
+                                <usau1:BackupSlot x:TypeArguments="umafe:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="Browse">
+                                  <usau1:BackupSlot.BackupValues>
+                                    <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="3">
+                                      <InArgument x:TypeArguments="x:String">01J4JOQ3BJFS25NBFQ2BCLZBXWAZ6N22XU</InArgument>
+                                      <InArgument x:TypeArguments="x:String">Invoice_Template.xlsx</InArgument>
+                                      <InArgument x:TypeArguments="x:String">b!rUA5skaiBE2YvESeSpKi_sNTrZMA3g1JtpEtI_KuM0vMYjwDSNnVSK_92jIT6MO5</InArgument>
+                                    </scg:List>
+                                    <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
+                                      <x:Null />
+                                    </scg:List>
+                                  </usau1:BackupSlot.BackupValues>
+                                </usau1:BackupSlot>
+                              </umafm:DriveItemArgument.ItemIdBackup>
+                            </umafm:DriveItemArgument>
+                          </umae:WriteRangeConnections.DriveItemArgument>
+                          <umae:WriteRangeConnections.RangeWriteModeBackup>
+                            <usau1:BackupSlot x:TypeArguments="umaee:RangeWriteMode" StoredValue="Overwrite">
+                              <usau1:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="umaee:RangeWriteMode, scg:List(x:Object)" />
+                              </usau1:BackupSlot.BackupValues>
+                            </usau1:BackupSlot>
+                          </umae:WriteRangeConnections.RangeWriteModeBackup>
+                          <umae:WriteRangeConnections.TemplateArgument>
+                            <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Item="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" FullPathHint="" ItemSelectionMode="Browse" ParentFullPathHint="">
+                              <umafm:DriveItemArgument.ItemIdBackup>
+                                <usau1:BackupSlot x:TypeArguments="umafe:EDriveItemMode" StoredValue="{x:Null}">
+                                  <usau1:BackupSlot.BackupValues>
+                                    <scg:Dictionary x:TypeArguments="umafe:EDriveItemMode, scg:List(x:Object)" />
+                                  </usau1:BackupSlot.BackupValues>
+                                </usau1:BackupSlot>
+                              </umafm:DriveItemArgument.ItemIdBackup>
+                            </umafm:DriveItemArgument>
+                          </umae:WriteRangeConnections.TemplateArgument>
+                        </umae:WriteRangeConnections>
+                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="WriteLine_31" Text="[Path.Combine(Directory.GetCurrentDirectory, &quot;Invoices&quot; , String.Concat(io_CustomerName.Replace(&quot;Name: &quot;, &quot;&quot;).Trim(), &quot;_Invoice.pdf&quot;))]" />
+                        <Assign sap:VirtualizedContainerService.HintSize="434,118" sap2010:WorkflowViewState.IdRef="Assign_17">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[attachmentPath]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String" xml:space="preserve">[System.IO.Path.Combine(
+    System.IO.Directory.GetCurrentDirectory(),
+    "Invoices",
+    String.Concat(
+        io_CustomerName.Replace("Name: ", "").Trim(),
+        "_",
+        DateTime.Today.ToString("MMddyyyy"),
+        "_Invoice.pdf"
+    )
+)]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ueab:SaveAsPdfX EndPage="{x:Null}" StartPage="{x:Null}" DestinationPdfPath="[attachmentPath]" DisplayName="Save Excel File As PDF" sap:VirtualizedContainerService.HintSize="434,186.66666666666666" sap2010:WorkflowViewState.IdRef="SaveAsPdfX_1" SaveQuality="StandardQuality" Workbook="[Excel]" />
+                      </Sequence>
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelApplicationCard.Body>
+              </ueab:ExcelApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelProcessScopeX.Body>
+      </ueab:ExcelProcessScopeX>
+      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" AttachmentInputMode="FilePaths" Body="[&quot;Dear &quot; + io_CustomerName.Replace(&quot;Name: &quot;, &quot;&quot;).Trim() + &quot;,&quot; + Environment.NewLine +&#xA;&quot;We hope this message finds you well. Please find attached the invoice for your recent purchase - Service Changing Tyre Service. &quot; + Environment.NewLine + &#xA;&quot;Best regards,&quot; + Environment.NewLine + &#xA;&quot;Flash Services&quot;]" ContinueOnError="False" DisplayName="Send SMTP Email" Email="bernaural123@gmail.com" EnableSSL="True" From="bernaural123@gmail.com" sap:VirtualizedContainerService.HintSize="604,326" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Password="whse qwvg gqfw zrfz" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Invoice - Changing tyres service" To="[out_Email.From.Address.ToString()]" UseISConnection="False" UseOAuth="False">
+        <ui:SendMail.AttachmentsBackup>
+          <usau2:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+            <usau2:BackupSlot.BackupValues>
+              <scg:List x:TypeArguments="x:Object" x:Key="Existing" Capacity="1">
+                <x:Null />
+              </scg:List>
+            </usau2:BackupSlot.BackupValues>
+          </usau2:BackupSlot>
+        </ui:SendMail.AttachmentsBackup>
+        <ui:SendMail.ConnectionDetailsBackupSlot>
+          <usau2:BackupSlot x:TypeArguments="umae1:ConnectionDetails" StoredValue="LegacyConfiguration">
+            <usau2:BackupSlot.BackupValues>
+              <scg:List x:TypeArguments="x:Object" x:Key="IntegrationService" Capacity="1">
+                <x:String>56fcfb64-86f7-4074-b911-12c9bf89ce48</x:String>
+              </scg:List>
+              <scg:List x:TypeArguments="x:Object" x:Key="LegacyConfiguration" Capacity="7">
+                <x:Null />
+                <x:Null />
+                <x:Null />
+                <x:Null />
+                <x:Null />
+                <x:Null />
+                <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+              </scg:List>
+            </usau2:BackupSlot.BackupValues>
+          </usau2:BackupSlot>
+        </ui:SendMail.ConnectionDetailsBackupSlot>
+        <ui:SendMail.Files>
+          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+            <InArgument x:TypeArguments="x:String">[attachmentPath]</InArgument>
+          </scg:List>
+        </ui:SendMail.Files>
+      </ui:SendMail>
+    </Sequence>
+  </Sequence>
+</Activity>

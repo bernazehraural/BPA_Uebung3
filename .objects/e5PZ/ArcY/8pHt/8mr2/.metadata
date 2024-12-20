@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Label '1pm'",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "8mr2XeRpHkSfnx_6qe5GPw",
+  "Reference": "r2aVhoRjsEybYC389EQ7Qw/8mr2XeRpHkSfnx_6qe5GPw",
+  "ParentRef": "r2aVhoRjsEybYC389EQ7Qw/8pHtCkhwxU2s-xUPTKEA9g",
+  "Created": "2024-12-18T12:39:48.6256309Z",
+  "Updated": "2024-12-18T12:39:48.6256309Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

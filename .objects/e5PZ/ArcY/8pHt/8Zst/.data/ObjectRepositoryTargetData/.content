@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="lsxQDpnpWUaL7dsrsKx83w" Reference="r2aVhoRjsEybYC389EQ7Qw/8Zst3Ci38UGFOQSAzrYh4g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fullcalendar.io/demos" CVScreenId="40b00305-1c60-4b70-9cfa-86deff782bae" CvElementArea="340, 505, 25, 30" CvTextArea="50, 509, 166, 21" CvTextArgument="Selectable Dates" CvType="ArrowButton" DesignTimeRectangle="11, -219, 1063, 1168" DesignTimeScaleFactor="1.5" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl aria-role='tab' tag='DIV' type='' class='accordion__panel-title' /&gt;" Guid="719b6517-2e21-4a05-92b1-e344571615ca" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Demos | FullCalendar' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="0dcc74cc-902c-4c38-9e67-b46ec64b9db9" CvElementArea="340, 505, 25, 30" CvTextArea="50, 509, 166, 21" CvTextArgument="Selectable Dates" CvType="ArrowButton" DesignTimeRectangle="34, 484, 345, 72" FuzzySelectorArgument="&lt;webctrl aaname='Selectable Dates' aria-role='tab' tag='DIV' type='' class='accordion__panel-title' check:innerText='Selectable Dates' /&gt;" Guid="a91951ac-ce92-4204-bba7-797f9e18cd0c" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="d666469f57beba3963a379e62e2617dc.png" xmlns="">0YstP6Fm0-kq_ONvBiuXlNw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

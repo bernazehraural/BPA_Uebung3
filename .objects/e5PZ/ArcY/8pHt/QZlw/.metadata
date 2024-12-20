@@ -1,0 +1,14 @@
+﻿{
+  "Name": "all-day(1)",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "QZlwZRRBukaWjU-IJLAr_Q",
+  "Reference": "r2aVhoRjsEybYC389EQ7Qw/QZlwZRRBukaWjU-IJLAr_Q",
+  "ParentRef": "r2aVhoRjsEybYC389EQ7Qw/8pHtCkhwxU2s-xUPTKEA9g",
+  "Created": "2024-12-18T18:48:59.5269685Z",
+  "Updated": "2024-12-18T18:48:59.5269685Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

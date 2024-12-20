@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="2kiB4_r9aUO6GoCth1A5Pg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fullcalendar.io/demos" DesignTimeRectangle="624, 128, 694, 348" DesignTimeScaleFactor="1.5" FuzzySelectorArgument="&lt;ctrl name='fullcalendar.io says' role='dialog' /&gt;&lt;ctrl automationid='' role='pane' check:fulltext='fullcalendar.io says&amp;#xD;&amp;#xA;OK&amp;#xD;&amp;#xA;Cancel' /&gt;" Guid="c14cbc7e-1471-4f2d-b6a4-93ccb1039643" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Demos | FullCalendar - Google Chrome' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="635, 213, 672, 61" FullSelectorArgument="&lt;ctrl name='fullcalendar.io says' role='dialog' /&gt;&lt;ctrl idx='9' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl name='fullcalendar.io says' role='dialog' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="b77fc18d-3675-4fd7-bed6-8507b28127cc" SearchSteps="Selector, FuzzySelector" />
+          <Target CVScreenId="c8d4770b-36f6-451e-bb5b-8e552bdda6f4" CvElementArea="661, 281, 618, 60" CvType="InputBox" DesignTimeRectangle="665, 285, 612, 55" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='fullcalendar.io says' role='dialog' /&gt;&lt;ctrl name='Create an event from 2024-12-24 to 2024-12-25 (excl). Enter a ti*' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='fullcalendar.io says' role='dialog' /&gt;&lt;ctrl name='Create an event from 2024-12-24 to 2024-12-25 (excl). Enter a ti*' role='editable text' automationid='' /&gt;" Guid="d6206ee4-a7f6-492a-b8fd-4ff8d0cd82d0" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="caab6eb6ae16cb9f70800af3cc09ea70.png" xmlns="">0OXhS1bShrkWff41BVSxu1g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckElement</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

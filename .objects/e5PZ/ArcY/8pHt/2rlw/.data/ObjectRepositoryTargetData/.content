@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Mbccr_Of1k6KoY4KeQZIgw" Reference="r2aVhoRjsEybYC389EQ7Qw/2rlw33DNm0aIJft0Wx5vNw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fullcalendar.io/demos" CVScreenId="f2ff1215-d7c7-4f31-9967-694576e4bd45" CvElementArea="362, 654, 27, 32" CvTextArea="71, 659, 166, 21" CvTextArgument="Selectable Dates" CvType="ArrowButton" DesignTimeRectangle="56, 295, 345, 71" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl aaname='Selectable Dates' aria-role='tab' inner-text='' tag='DIV' /&gt;" Guid="bb3a5439-e2ce-4a4b-8fc0-4c9136a56071" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Demos | FullCalendar' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="f2ff1215-d7c7-4f31-9967-694576e4bd45" CvTextArea="71, 659, 166, 21" CvTextArgument="Dates" CvType="Text" DesignTimeRectangle="179, 321, 58, 19" ElementType="Text" Guid="0c219b0f-70b8-4c07-a33b-66324d4e466f" ImageBase64="" SearchSteps="CV" TargetType="ComputerVisionBased" />
+          <Target CVScreenId="f2ff1215-d7c7-4f31-9967-694576e4bd45" CvTextArea="71, 659, 166, 21" CvTextArgument="Selectable Dates" CvType="Text" DesignTimeRectangle="71, 319, 166, 21" ElementType="Text" Guid="3eecbc7e-c294-497a-b11f-fb21a1fc1791" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="4a9214ef6061abbbe33e92923796a123.png" xmlns="">0jfssYf4QyEyD_xaEwDWIBg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

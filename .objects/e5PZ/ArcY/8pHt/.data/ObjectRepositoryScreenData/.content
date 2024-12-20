@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="VA86wbSJok2C201wzujz9g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-11, -11, 1942, 1030" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAELSURBVFhH7dfBCgFBHMfxvbhyRpHyFryGBxDPsJLCRZ5hb7yQA044ODi7KELi+9t2JevgYHZKM/Vpm9np///tRO16eX8e4IR7ytQzUIDjy2Lajgrw6UZqXAAX4D3AGTtsDdrjY4Ar+qighLIBqlvDDIkAevIqPFOj4C/UT8ZIBNDxKGW03cxQfQzgArgALoAL8NsArfXNa66ukkMDveiqeXhfQ/Xx+wBqgiwmuOAeXTXXerhP9WEsgJ74DDWPaa71cJ/qw1iALl6bx7Qe7lN9/O8J2PsNtDeW/wXfDtWHnQDFzjIOMEQigF4W6/AKHTMhVBsZTJEIIHpZHEFHZMoEBzwDWP84tfh5Pg8e0Cd7tRMy+l8AAAAASUVORK5CYII=" Selector="&lt;html app='chrome.exe' title='Demos | FullCalendar' /&gt;" Title="Demos | FullCalendar" Url="https://fullcalendar.io/demos" Version="V1">
+      <imageRef attrName="InformativeScreenshot" originalValue="cca1fe5ac807160a2f381730784b1edb.jpg" xmlns="">0RCYw8St6E0ebHaiPGPwoQQ</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

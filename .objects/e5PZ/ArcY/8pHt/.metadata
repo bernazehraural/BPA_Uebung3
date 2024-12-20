@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Demos  FullCalendar",
+  "Type": "Screen",
+  "Id": "8pHtCkhwxU2s-xUPTKEA9g",
+  "Reference": "r2aVhoRjsEybYC389EQ7Qw/8pHtCkhwxU2s-xUPTKEA9g",
+  "ParentRef": "r2aVhoRjsEybYC389EQ7Qw/ArcY6wFrIkKPftSHGhX4mA",
+  "Created": "2024-12-17T21:49:35.1916428Z",
+  "Updated": "2024-12-17T21:49:35.1916428Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
