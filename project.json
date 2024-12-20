@@ -5,6 +5,7 @@
   "main": "Main.xaml",
   "dependencies": {
     "Aspire.MongoDB.Driver": "[9.0.0]",
+    "Microsoft.CodeAnalysis.VisualBasic": "[4.12.0]",
     "Microsoft.Extensions.Configuration.Binder": "[9.0.0]",
     "MongoDBMigrations": "[2.2.0]",
     "System.Security.Cryptography.ProtectedData": "[9.0.0]",
