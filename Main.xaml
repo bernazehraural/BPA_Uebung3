@@ -371,7 +371,7 @@
       <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="888.6666666666666,15654.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_18">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="888.6666666666666,15962.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_18">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="queryResult" />
       <Variable x:TypeArguments="OutArgument" Name="out_Result" />
@@ -465,7 +465,7 @@
       <uga:WaitForEmailReceivedConnections.Filter>
         <ugagf:TriggerMailFilterWithVariablesCollection LogicalOperator="And">
           <ugagf:TriggerMailFilterWithVariablesCollection.Filters>
-            <ugagf:TriggerMailFilterElementWithVariables ArrayStringOperator="Contains" BodyOperator="Contains" CollectionFilterOperator="In" Criteria="Subject" InStringValue="Re: Request: Personal Information" SenderRecipientOperator="Contains" StringOperator="Contains" TypeValue="Email" />
+            <ugagf:TriggerMailFilterElementWithVariables ArrayStringOperator="Contains" BodyOperator="Contains" CollectionFilterOperator="In" Criteria="Subject" InStringValue="Request: Personal Information" SenderRecipientOperator="Contains" StringOperator="Contains" TypeValue="Email" />
             <ugagf:TriggerMailFilterElementWithVariables ArrayStringOperator="Contains" BodyOperator="Contains" CollectionFilterOperator="In" Criteria="Body" InStringValue="Name" SenderRecipientOperator="Contains" StringOperator="Contains" TypeValue="Email" />
           </ugagf:TriggerMailFilterWithVariablesCollection.Filters>
         </ugagf:TriggerMailFilterWithVariablesCollection>
@@ -525,7 +525,7 @@
                             .Trim()]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="try  &#xA;{&#xA;    // Setup MongoDB connection settings&#xA;    var settings = MongoClientSettings.FromConnectionString(in_ConnectionUri);&#xA;    settings.ServerApi = new ServerApi(ServerApiVersion.V1);&#xA;&#xA;    // Create MongoDB client&#xA;    var client = new MongoClient(settings);&#xA;&#xA;    // Run ping command to check connection&#xA;    out_Result = (client.GetDatabase(&quot;admin&quot;).RunCommand&lt;BsonDocument&gt;(new BsonDocument(&quot;ping&quot;, 1))).ToString();&#xA;    System.Console.WriteLine(&quot;Pinged your deployment. You successfully connected to MongoDB!&quot;);&#xA;&#xA;    // Access the database and collection&#xA;    var database = client.GetDatabase(&quot;customers&quot;); // Replace with your database name&#xA;    var collection = database.GetCollection&lt;BsonDocument&gt;(&quot;CustomerRelation&quot;); // Replace with your collection name&#xA;&#xA;    // Get the name, surname, and vehicle input from UiPath&#xA;    string inputName = in_CustomerName; // Use the UiPath input variable for name&#xA;    string inputSurname = in_CustomerSurname; // Use the UiPath input variable for surname&#xA;    string inputVehicle = in_CustomerVehicle; // Use the UiPath input variable for vehicle&#xA;&#xA;    // Check if the input values are null or empty&#xA;    if (string.IsNullOrEmpty(inputName) || string.IsNullOrEmpty(inputSurname) || string.IsNullOrEmpty(inputVehicle))&#xA;    {&#xA;        out_Result = &quot;Error: Name, Surname or Vehicle input is missing.&quot;;&#xA;        return;&#xA;    }&#xA;&#xA;    // Define the query to match by name, surname, and vehicle&#xA;    var filter = Builders&lt;BsonDocument&gt;.Filter.Eq(&quot;name&quot;, inputName) &amp;&#xA;                 Builders&lt;BsonDocument&gt;.Filter.Eq(&quot;surname&quot;, inputSurname) &amp;&#xA;                 Builders&lt;BsonDocument&gt;.Filter.Eq(&quot;vehicle&quot;, inputVehicle);&#xA;&#xA;    // Check if a document with the specified name, surname, and vehicle exists in the collection&#xA;    var existingDocument = collection.Find(filter).FirstOrDefault();&#xA;&#xA;    if (existingDocument != null)&#xA;    {&#xA;        // If a document is found, return True (Data exists)&#xA;        out_Result = &quot;True&quot;;&#xA;    }&#xA;    else&#xA;    {&#xA;       &#xA;    }&#xA;}&#xA;catch (Exception ex)&#xA;{&#xA;    out_Result = $&quot;Error: {ex.Message}&quot;;&#xA;    System.Console.WriteLine($&quot;Error: {ex.Message}&quot;);&#xA;}&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="648,197.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="try  &#xD;&#xA;{&#xD;&#xA;    // Setup MongoDB connection settings&#xD;&#xA;    var settings = MongoClientSettings.FromConnectionString(in_ConnectionUri);&#xD;&#xA;    settings.ServerApi = new ServerApi(ServerApiVersion.V1);&#xD;&#xA;&#xD;&#xA;    // Create MongoDB client&#xD;&#xA;    var client = new MongoClient(settings);&#xD;&#xA;&#xD;&#xA;    // Run ping command to check connection&#xD;&#xA;    out_Result = (client.GetDatabase(&quot;admin&quot;).RunCommand&lt;BsonDocument&gt;(new BsonDocument(&quot;ping&quot;, 1))).ToString();&#xD;&#xA;    System.Console.WriteLine(&quot;Pinged your deployment. You successfully connected to MongoDB!&quot;);&#xD;&#xA;&#xD;&#xA;    // Access the database and collection&#xD;&#xA;    var database = client.GetDatabase(&quot;customers&quot;); // Replace with your database name&#xD;&#xA;    var collection = database.GetCollection&lt;BsonDocument&gt;(&quot;CustomerRelation&quot;); // Replace with your collection name&#xD;&#xA;&#xD;&#xA;    // Get the name, surname, and vehicle input from UiPath&#xD;&#xA;    string inputName = in_CustomerName; // Use the UiPath input variable for name&#xD;&#xA;    string inputSurname = in_CustomerSurname; // Use the UiPath input variable for surname&#xD;&#xA;    string inputVehicle = in_CustomerVehicle; // Use the UiPath input variable for vehicle&#xD;&#xA;&#xD;&#xA;    // Check if the input values are null or empty&#xD;&#xA;    if (string.IsNullOrEmpty(inputName) || string.IsNullOrEmpty(inputSurname) || string.IsNullOrEmpty(inputVehicle))&#xD;&#xA;    {&#xD;&#xA;        out_Result = &quot;Error: Name, Surname or Vehicle input is missing.&quot;;&#xD;&#xA;        return;&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    // Define the query to match by name, surname, and vehicle&#xD;&#xA;    var filter = Builders&lt;BsonDocument&gt;.Filter.Eq(&quot;name&quot;, inputName) &amp;&#xD;&#xA;                 Builders&lt;BsonDocument&gt;.Filter.Eq(&quot;surname&quot;, inputSurname) &amp;&#xD;&#xA;                 Builders&lt;BsonDocument&gt;.Filter.Eq(&quot;vehicle&quot;, inputVehicle);&#xD;&#xA;&#xD;&#xA;    // Check if a document with the specified name, surname, and vehicle exists in the collection&#xD;&#xA;    var existingDocument = collection.Find(filter).FirstOrDefault();&#xD;&#xA;&#xD;&#xA;    if (existingDocument != null)&#xD;&#xA;    {&#xD;&#xA;        // If a document is found, return True (Data exists)&#xD;&#xA;&#x9;&#x9;out_ServiceCoverage = existingDocument[&quot;coverage&quot;].ToString();&#xD;&#xA;        out_Result = &quot;True&quot;;&#xD;&#xA;    }&#xD;&#xA;    else&#xD;&#xA;    {&#xD;&#xA;       &#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;catch (Exception ex)&#xD;&#xA;{&#xD;&#xA;    out_Result = $&quot;Error: {ex.Message}&quot;;&#xD;&#xA;    System.Console.WriteLine($&quot;Error: {ex.Message}&quot;);&#xD;&#xA;}&#xD;&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="648,197.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_ConnectionUri">mongodb+srv://bernaural123:Balkaya00@uebung3.sdru7.mongodb.net/?retryWrites=true&amp;w=majority&amp;appName=Uebung3</InArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="out_Result">[queryResult]</OutArgument>
@@ -568,15 +568,15 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[rescheduleFlag = True]" DisplayName="While Re-schedule is requested" sap:VirtualizedContainerService.HintSize="648,6031.333333333333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[rescheduleFlag = True]" DisplayName="While Re-schedule is requested" sap:VirtualizedContainerService.HintSize="648,6339.333333333333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="606,5899.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="606,6207.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Suggest Appointment" sap:VirtualizedContainerService.HintSize="572,5839.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Suggest Appointment" sap:VirtualizedContainerService.HintSize="572,6147.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -830,7 +830,8 @@
               </uga:WaitForEmailReceivedConnections.Folder>
             </uga:WaitForEmailReceivedConnections>
             <uga:DeleteEmailConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" AuthScopesInvalid="False" ConnectionId="3a537b0e-bad3-4407-b69f-30f3765c0dcf" DisplayName="Delete Email" Email="[out_Response]" sap:VirtualizedContainerService.HintSize="538,239.33333333333334" sap2010:WorkflowViewState.IdRef="DeleteEmailConnections_3" PermanentlyDelete="False" UseConnectionService="True" />
-            <If Condition="[out_Response.Body.ToString().ToLower().Contains(&quot;confirm&quot;)]" sap:VirtualizedContainerService.HintSize="538,1070.6666666666667" sap2010:WorkflowViewState.IdRef="If_3">
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="538,124" sap2010:WorkflowViewState.IdRef="WriteLine_42" Text="[out_Response.Body.ToString().Split(New String() { &quot;On &quot;, &quot;----Original Message----&quot;, vbLf }, StringSplitOptions.None)(0).ToLower()]" />
+            <If Condition="[out_Response.Body.ToString().Split(New String() { &quot;On &quot;, &quot;----Original Message----&quot;, vbLf }, StringSplitOptions.None)(0).ToLower().Contains(&quot;confirm&quot;)]" sap:VirtualizedContainerService.HintSize="538,1254.6666666666667" sap2010:WorkflowViewState.IdRef="If_3">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="504,168" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
@@ -849,20 +850,28 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="504,762.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="504,946.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_12">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:IfElseIfV2 Condition="[out_Response.Body.ToString().ToLower().Contains(&quot;cancel&quot;)]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="470,702.6666666666666" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+                  <ui:IfElseIfV2 Condition="[out_Response.Body.ToString().Split(New String() { &quot;On &quot;, &quot;----Original Message----&quot;, vbLf }, StringSplitOptions.None)(0).ToLower().Contains(&quot;cancel&quot;)]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="470,886.6666666666666" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
                     <ui:IfElseIfV2.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,292" sap2010:WorkflowViewState.IdRef="Sequence_14">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="434,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_21">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[rescheduleFlag]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                          </Assign.Value>
+                        </Assign>
                         <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,114.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_21" Text="Re-schedule is requested" />
                       </Sequence>
                     </ui:IfElseIfV2.Else>
@@ -870,7 +879,7 @@
                       <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True" />
                     </ui:IfElseIfV2.ElseIfs>
                     <ui:IfElseIfV2.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,349.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,416" sap2010:WorkflowViewState.IdRef="Sequence_13">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -885,7 +894,7 @@
                           </Assign.Value>
                         </Assign>
                         <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="WriteLine_23" Text="Appointment was cancelled" />
-                        <ui:Break sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="Break_1" />
+                        <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="434,114.66666666666667" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="User cancelled" />
                       </Sequence>
                     </ui:IfElseIfV2.Then>
                   </ui:IfElseIfV2>
