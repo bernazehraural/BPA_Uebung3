@@ -9,7 +9,6 @@ This project implements an automation for customer-related workflows of the tire
 - [Usage](#usage)
 - [Features](#features)
 - [Dependencies](#dependencies)
-- [License](#license)
 - [Contact](#contact)
 
 ##  Prerequisites
@@ -139,9 +138,6 @@ Target Framework: Windows
 Main.xaml: The main workflow file that orchestrates the automation process.
 project.json: Contains metadata and dependencies for the project.
 
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Contact
 
