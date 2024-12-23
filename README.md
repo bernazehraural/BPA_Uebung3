@@ -22,6 +22,7 @@ This project implements an automation for customer-related workflows of the tire
 
   A MongoDB database instance is required. Prepare a valid connection URI.
 - Dependencies
+  
   Dependencies will be resolved automatically when opening the project in UiPath Studio. Required libraries include:
   - Aspire.MongoDB.Driver
   - Microsoft.CodeAnalysis.VisualBasic
@@ -89,7 +90,7 @@ Name: XXX
 
 - Then it checks for the existence of the user in DB, if not the user will be added within the workflow.
 - Then it takes an appointment date & time, opening "https://fullcalendar.io/demos" website and click on the Appointment date, saves the appointment, takes the screenshot of the current page and stores under the project.
-- Then it send an information email regarding the appointment to the customer and waits until the customer will respond.
+- Then it sends an information email regarding the appointment to the customer and waits until the customer will respond.
   - If customer will respond to the Suggested Appointment with "Confirm" --> rescheduleFlag: False
   - If customer will respond to the Suggested Appointment with "Cancel" --> rescheduleFlag: False & Process Ends.
   - Otherwise, rescheduleFlag: True
